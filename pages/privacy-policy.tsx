@@ -11,7 +11,8 @@ export default function PrivacyPolicy() {
           </Head>
 
           <main className={styles.main}>
-            <h1 className={styles.title}>
+          <h1 className={styles.title}>
+            Lokinet Privacy policy
             </h1>
 
           </main>

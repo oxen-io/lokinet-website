@@ -11,7 +11,8 @@ export default function Faq() {
           </Head>
 
           <main className={styles.main}>
-            <h1 className={styles.title}>
+          <h1 className={styles.title}>
+            Lokinet FAQ
             </h1>
 
           </main>
