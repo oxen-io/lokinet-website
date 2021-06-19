@@ -1,0 +1,10 @@
+.container {
+  max-width: 1200px;
+  min-height: 100px;
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: aqua;
+}
