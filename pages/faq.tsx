@@ -157,7 +157,7 @@ export default function Faq() {
                 using a similar scheme to{' '}
                 <ExternalLink text="Namecoin" url="https://www.namecoin.org/" />{' '}
                 or <ExternalLink text="ENS" url="https://ens.domains/" />. You
-                can read more about ONS (previously called Loki name system)
+                can read more about ONS (previously called Loki name system){' '}
                 <ExternalLink
                   text="here"
                   url="https://github.com/oxen-io/oxen-core/issues/342"

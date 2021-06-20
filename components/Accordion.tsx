@@ -25,16 +25,18 @@ const StyledLi = styled.li<{ isExpanded: boolean }>`
     ${(props) => props.theme.colors.borderAccordion};
 `
 
-export const AccordionSection = (props: {
+/*
+{
   title: string
   index: number
   expandedIndex: number
   onClick: (index?: number) => void
   children: React.ReactNode
-}) => {
+}
+*/
+export const AccordionSection = (props: any) => {
   const { onClick, expandedIndex, index, title, children } = props
-  console.log('expandedIndex', expandedIndex)
-  console.log('index', index)
+
   const isExpanded = expandedIndex === index
   return (
     <StyledLi isExpanded={isExpanded}>
@@ -59,7 +61,8 @@ const StyledContent = styled.div<{ isExpanded: boolean }>`
   padding-left: ${(props) => props.theme.margins.xl};
   padding-right: 400px;
 
-  transform: ${(props) => (props.isExpanded ? 'scaleY(1)' : 'scaleY(0)')};
+  transform: ${(props) =>
+    props.isExpanded ? 'translate(0)' : 'translate(-1)'};
   height: ${(props) => (props.isExpanded ? 'auto' : '0')};
   transform-origin: top;
   transition: all 0.3s ease;
