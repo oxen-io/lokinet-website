@@ -19,6 +19,7 @@ export const light = {
     primary: 'white',
     secondary: 'black',
     strongColor: 'rgb(58, 58, 58)',
+    borderAccordion: 'rgb(212, 212, 212)',
   },
   themeSuffix: 'blk',
 
@@ -30,6 +31,7 @@ export const dark: ThemeType = {
     primary: 'black',
     secondary: 'white',
     strongColor: 'white',
+    borderAccordion: 'white',
   },
   themeSuffix: 'wte',
   ...common,

@@ -6,7 +6,7 @@ import TwitterButton from '../buttons/image-button/social-buttons/TwitterButton'
 import Spacer from '../spacer/Spacer'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { SvgPlusImage } from '../icons/SvgPlusImage'
+import { SvgPlusIcon } from '../icons/SvgPlusIcon'
 import { Flex } from '../flex/Flex'
 import { SpacerBorder } from '../icons/SpacerBorder'
 import { PrivacyLinkButton } from '../buttons/InternalLinkButton'
@@ -40,9 +40,9 @@ export default function Footer() {
     <StyledFooter>
       <Flex container={true} flexGrow={1} width="100%" flexDirection="column">
         <Flex container={true} flexGrow={1} alignItems="center">
-          <SvgPlusImage />
+          <SvgPlusIcon />
           <SpacerBorder />
-          <SvgPlusImage />
+          <SvgPlusIcon />
         </Flex>
         <StyledBottomFooter>
           <Logo />

@@ -7,7 +7,7 @@ const Svg = styled(Icon)`
   color: ${(props) => props.theme.colors.secondary};
 `
 
-export const SvgPlusImage = () => (
+export const SvgPlusIcon = () => (
   <Svg viewBox="0 0 1000 1000">
     <path
       fill="currentColor"

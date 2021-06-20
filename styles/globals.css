@@ -14,7 +14,7 @@ a {
 * {
   box-sizing: border-box;
   transition: all 0.3s linear;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,14 +35,11 @@ h3 {
   padding-bottom: 7px;
 }
 
-
-
 p {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.85em;
   text-align: justify;
-  text-justify: inter-word;
   margin-bottom: 24px;
 }
 
@@ -91,5 +88,13 @@ main {
   src: url('/fonts/Archivo-800.ttf');
   font-style: bold;
   font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo-600.ttf');
+  font-style: bold;
+  font-weight: 600;
   font-display: swap;
 }

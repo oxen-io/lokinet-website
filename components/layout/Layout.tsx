@@ -14,11 +14,15 @@ const StyledContainer = styled.div`
   margin-left: auto;
 `
 
+const StyledMain = styled.div`
+  width: 100%;
+`
+
 export default function Layout(props: { children: React.ReactNode }) {
   return (
     <StyledContainer>
       <Header />
-      <main>{props.children}</main>
+      <StyledMain>{props.children}</StyledMain>
       <Footer />
     </StyledContainer>
   )
