@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 import styled, { useTheme } from 'styled-components'
 
 const StyledContainer = styled.div`
@@ -7,15 +9,19 @@ const StyledContainer = styled.div`
 `
 
 export default function Logo() {
-  const theme = useTheme();
+  const theme = useTheme()
   return (
     <StyledContainer>
-      <Image
-        src={`/Lokinet_logo_${theme.themeSuffix}.png`}
-        alt="Lokinet logo"
-        width={1024}
-        height={200}
-      />
+      <Link href="/" passHref={true}>
+        <a>
+          <Image
+            src={`/Lokinet_logo_${theme.themeSuffix}.png`}
+            alt="Lokinet logo"
+            width={1024}
+            height={200}
+          />
+        </a>
+      </Link>
     </StyledContainer>
   )
 }
