@@ -20,7 +20,6 @@ const StyledLi = styled.li<{ isExpanded: boolean }>`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-right: 400px;
   font-family: Roboto, sans-serif;
   border-bottom: ${(props) => (props.isExpanded ? '1px' : '0px')} solid
     ${(props) => props.theme.colors.borderAccordion};
@@ -28,18 +27,26 @@ const StyledLi = styled.li<{ isExpanded: boolean }>`
 
 export const AccordionSection = (props: {
   title: string
+  index: number
+  expandedIndex: number
+  onClick: (index?: number) => void
   children: React.ReactNode
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const { onClick, expandedIndex, index, title, children } = props
+  console.log('expandedIndex', expandedIndex)
+  console.log('index', index)
+  const isExpanded = expandedIndex === index
   return (
     <StyledLi isExpanded={isExpanded}>
-      <StyledSectionTitle onClick={() => setIsExpanded(!isExpanded)}>
+      <StyledSectionTitle
+        onClick={() => (isExpanded ? onClick(-1) : onClick(index))}
+      >
         {isExpanded ? <SvgMinusIcon /> : <SvgPlusIconBold />}
-        {props.title}
+        {title}
       </StyledSectionTitle>
 
       <AccordionSectionContent isExpanded={isExpanded}>
-        {props.children}
+        {children}
       </AccordionSectionContent>
     </StyledLi>
   )
@@ -50,6 +57,7 @@ const StyledContent = styled.div<{ isExpanded: boolean }>`
   padding-bottom: ${(props) => (props.isExpanded ? props.theme.margins.xl : 0)};
   padding-right: ${(props) => props.theme.margins.xl};
   padding-left: ${(props) => props.theme.margins.xl};
+  padding-right: 400px;
 
   transform: ${(props) => (props.isExpanded ? 'scaleY(1)' : 'scaleY(0)')};
   height: ${(props) => (props.isExpanded ? 'auto' : '0')};
@@ -84,6 +92,23 @@ const StyledAccordion = styled.ul`
   list-style-type: none;
 `
 
-export const Accordion = (props: { children: React.ReactNode }) => {
-  return <StyledAccordion>{props.children}</StyledAccordion>
+export const Accordion = (props: { children: React.ReactNodeArray }) => {
+  const [expandedIndex, setExpandedIndex] = useState<number>(-1)
+
+  let index = -1
+  const childrenWithExpandedIndex = React.Children.map<
+    React.ReactNode,
+    React.ReactNode
+  >(props.children, (child) => {
+    index = index + 1
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, {
+        expandedIndex: expandedIndex,
+        index,
+        onClick: setExpandedIndex,
+      })
+    }
+  })
+
+  return <StyledAccordion>{childrenWithExpandedIndex}</StyledAccordion>
 }
