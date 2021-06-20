@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { SvgPlusImage } from '../icons/SvgPlusImage'
 import { Flex } from '../flex/Flex'
 import { SpacerBorder } from '../icons/SpacerBorder'
+import { PrivacyLinkButton } from '../buttons/InternalLinkButton'
 
 const StyledFooter = styled.footer`
   min-height: 100px;
@@ -34,17 +35,6 @@ const StyledBottomFooter = styled.div`
   flex-direction: row;
 `
 
-const StyledPrivacyLink = styled.a`
-  margin-right: ${(props) => props.theme.margins.lg};
-  border-bottom: solid 1px black;
-  transition: all ${(props) => props.theme.duration.linkBottom} linear;
-  white-space: nowrap;
-
-  &:hover {
-    border-bottom: solid 1px rgba(0, 0, 0, 0);
-  }
-`
-
 export default function Footer() {
   return (
     <StyledFooter>
@@ -57,9 +47,7 @@ export default function Footer() {
         <StyledBottomFooter>
           <Logo />
           <Spacer />
-          <Link href="/privacy-policy" passHref={true}>
-            <StyledPrivacyLink>Privacy Policy</StyledPrivacyLink>
-          </Link>
+          <PrivacyLinkButton />
           <TwitterButton />
           <TelegramButton />
         </StyledBottomFooter>

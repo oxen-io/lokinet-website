@@ -4,7 +4,7 @@ import { ExternalLink } from '../components/ExternalLink'
 import Layout from '../components/layout/Layout'
 export default function PrivacyPolicy() {
   return (
-    <div>
+    <>
       <Head>
         <title>Privacy Policy - Lokinet</title>
         <meta name="description" content="Privacy Policy - Lokinet" />
@@ -95,6 +95,6 @@ export default function PrivacyPolicy() {
           want to say hello — please send us an email at team@oxen.io
         </p>
       </Layout>
-    </div>
+    </>
   )
 }

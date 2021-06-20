@@ -92,3 +92,11 @@ main {
   font-weight: 600;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo-800.ttf');
+  font-style: bold;
+  font-weight: 800;
+  font-display: swap;
+}

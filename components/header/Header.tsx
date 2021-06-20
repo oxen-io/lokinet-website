@@ -1,4 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
+import { FaqLinkButton } from '../buttons/InternalLinkButton'
 import Logo from '../logo/Logo'
 import Spacer from '../spacer/Spacer'
 
@@ -16,6 +18,7 @@ export default function Header() {
     <StyledHeader>
       <Logo />
       <Spacer />
+      <FaqLinkButton />
     </StyledHeader>
   )
 }

@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Anonymous internet access - Lokinet</title>
         <meta
@@ -16,6 +16,6 @@ export default function Home() {
       <Layout>
         <h1>Lokinet - Anonymous internet access</h1>
       </Layout>
-    </div>
+    </>
   );
 }
