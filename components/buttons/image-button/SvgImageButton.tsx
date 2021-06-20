@@ -10,14 +10,20 @@ const StyledButton = styled.button`
   background-color: ${(props) => props.theme.colors.secondary};
   transition: 0.3s;
   padding: ${(props) => props.theme.margins.sm};
-
+  margin: ${(props) => props.theme.margins.sm};
   &:hover {
     filter: invert(1);
   }
+  cursor: pointer;
 `
 
 export default function SvgImageButton(props: {
   children: React.ReactElement
+  externalUrlToOpen: string
 }) {
-  return <StyledButton>{props.children}</StyledButton>
+  return (
+    <a target="_blank" href={props.externalUrlToOpen} rel="noopener noreferrer">
+      <StyledButton>{props.children}</StyledButton>
+    </a>
+  )
 }

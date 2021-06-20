@@ -1,5 +1,7 @@
-import Head from "next/head";
-import Layout from "../components/layout/Layout";
+import Head from 'next/head'
+import React from 'react'
+import { ExternalLink } from '../components/ExternalLink'
+import Layout from '../components/layout/Layout'
 export default function PrivacyPolicy() {
   return (
     <div>
@@ -21,7 +23,7 @@ export default function PrivacyPolicy() {
           Lokinet is designed so that it doesn’t access, create, or store any
           information which could be used to identify or track you. Lokinet
           doesn’t store any identifying information about your device or
-          connection, such as your IP address.{" "}
+          connection, such as your IP address.{' '}
         </p>
         <p>
           There is no registration process for Lokinet. You don’t need a phone
@@ -33,7 +35,7 @@ export default function PrivacyPolicy() {
           We don’t have control over what services you access using Lokinet.
           They may attempt to track or log information about you. For more
           information, it is important that you refer to the privacy policy of
-          the service you are accessing.{" "}
+          the service you are accessing.{' '}
         </p>
         <h3>
           <strong>Using Lokinet on a MacOS or Windows device</strong>
@@ -44,13 +46,15 @@ export default function PrivacyPolicy() {
         </p>
 
         <p>
-          <a href="https://support.apple.com/en-au/guide/mac-help/mh27990/mac">
-            MacOS analytics
-          </a>{" "}
-          and{" "}
-          <a href="https://docs.microsoft.com/en-au/windows/privacy/windows-diagnostic-data">
-            Windows diagnostic data collection
-          </a>{" "}
+          <ExternalLink
+            url="https://support.apple.com/en-au/guide/mac-help/mh27990/mac"
+            text="MacOS analytics"
+          />{' '}
+          and{' '}
+          <ExternalLink
+            url="https://docs.microsoft.com/en-au/windows/privacy/windows-diagnostic-data"
+            text="Windows diagnostic data collection"
+          />{' '}
           may record app crashes or usage information, depending on your
           personal operating system settings. This is a feature of these
           operating systems and applies to any software you use. Lokinet itself
@@ -62,10 +66,11 @@ export default function PrivacyPolicy() {
         <p>
           The Lokinet website never attempts to link your usage of the website
           to your real identity or create a user profile based on your activity.
-          The Lokinet website can also be accessed anonymously, using Lokinet,{" "}
-          <a href="/inqomcym4rhouwhxhnwcczj3j8ykb4ehxkh3yfqtpjybatdettuo.loki">
-            here
-          </a>
+          The Lokinet website can also be accessed anonymously, using Lokinet,{' '}
+          <ExternalLink
+            url="http://inqomcym4rhouwhxhnwcczj3j8ykb4ehxkh3yfqtpjybatdettuo.loki/"
+            text="here"
+          />
           .
         </p>
         <p>
@@ -91,5 +96,5 @@ export default function PrivacyPolicy() {
         </p>
       </Layout>
     </div>
-  );
+  )
 }

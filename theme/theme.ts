@@ -7,6 +7,10 @@ const common = {
     md: '15px',
     lg: '20px',
     xl: '30px',
+    xxl: '70px',
+  },
+  duration: {
+    linkBottom: 0.2,
   },
 }
 

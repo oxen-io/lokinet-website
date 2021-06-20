@@ -1,9 +1,11 @@
 import React from 'react'
 import SvgImageButton from '../SvgImageButton'
 
+const telegramURL = 'https://t.me/Oxen_Community'
+
 export default function TelegramButton() {
   return (
-    <SvgImageButton>
+    <SvgImageButton externalUrlToOpen={telegramURL}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 435">
         <path
           d="M407.2,81.2c-2.4,11.7-4.8,23.4-7.3,35.1c-14.5,68.4-29,136.8-43.6,205.2c-2.9,13.8-5.8,27.6-9,41.4
