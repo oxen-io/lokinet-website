@@ -35,5 +35,5 @@ export const dark: ThemeType = {
   ...common,
 }
 
-const theme = dark // set the light theme as the default.
+const theme = light // set the light theme as the default.
 export default theme
