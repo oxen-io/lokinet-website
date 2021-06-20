@@ -1,10 +1,11 @@
-import Head from "next/head";
-import React from "react";
-import Layout from "../components/layout/Layout";
+import Head from 'next/head'
+import React from 'react'
+import Layout from '../components/layout/Layout'
+import { PageRoot } from '../components/layout/PageRoot'
 
 export default function Home() {
   return (
-    <>
+    <PageRoot>
       <Head>
         <title>Anonymous internet access - Lokinet</title>
         <meta
@@ -16,6 +17,6 @@ export default function Home() {
       <Layout>
         <h1>Lokinet - Anonymous internet access</h1>
       </Layout>
-    </>
-  );
+    </PageRoot>
+  )
 }

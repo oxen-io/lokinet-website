@@ -13,7 +13,7 @@ export default function TwitterButton() {
           fillRule="evenodd"
           strokeWidth="10"
           strokeLinejoin="bevel"
-          filter="invert(1)"
+          fill="currentColor"
         />
       </svg>
     </SvgImageButton>

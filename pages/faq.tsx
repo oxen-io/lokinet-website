@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
-
+import { PageRoot } from '../components/layout/PageRoot'
 export default function Faq() {
   return (
-    <>
+    <PageRoot>
       <Head>
         <title>FAQ - Lokinet</title>
         <meta name="description" content="FAQ - Lokinet" />
@@ -13,6 +13,6 @@ export default function Faq() {
       <Layout>
         <h1>Lokinet - FAQ</h1>
       </Layout>
-    </>
+    </PageRoot>
   )
 }

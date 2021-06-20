@@ -19,7 +19,7 @@ export default function TelegramButton() {
           fillRule="evenodd"
           strokeWidth="10"
           strokeLinejoin="bevel"
-          filter="invert(1)"
+          fill="currentColor"
         />
       </svg>
     </SvgImageButton>

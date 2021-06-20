@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 
 const StyledContainer = styled.div`
   max-width: 200px;
@@ -7,10 +7,11 @@ const StyledContainer = styled.div`
 `
 
 export default function Logo() {
+  const theme = useTheme();
   return (
     <StyledContainer>
       <Image
-        src="/Lokinet_logo_blk.png"
+        src={`/Lokinet_logo_${theme.themeSuffix}.png`}
         alt="Lokinet logo"
         width={1024}
         height={200}

@@ -8,7 +8,6 @@ const StyledHeader = styled.div`
   min-height: 100px;
   align-items: center;
   display: flex;
-  background-color: lightgrey;
   flex-grow: 1;
   width: 100%;
 `

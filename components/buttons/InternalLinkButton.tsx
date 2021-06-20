@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const StyledInternalLinkButton = styled.a`
   margin-right: ${(props) => props.theme.margins.lg};
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px ${(props) => props.theme.colors.secondary};
   transition: all ${(props) => props.theme.duration.linkBottom} linear;
   white-space: nowrap;
 
@@ -18,7 +18,7 @@ const StyledFaqLink = styled(StyledInternalLinkButton)`
   font-weight: 800;
   font-family: 'Archivo', Sans-serif;
   padding: ${(props) => props.theme.margins.md};
-  border-bottom: solid 3px black;
+  border-bottom: solid 3px ${(props) => props.theme.colors.secondary};
 `
 
 export const PrivacyLinkButton = () => {

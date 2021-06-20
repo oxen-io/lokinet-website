@@ -1,10 +1,22 @@
 import Head from 'next/head'
 import React from 'react'
+import styled from 'styled-components'
 import { ExternalLink } from '../components/ExternalLink'
 import Layout from '../components/layout/Layout'
+
+import { PageRoot } from '../components/layout/PageRoot'
+
+const StyledStrong = styled.strong`
+  font-size: 25px;
+  line-height: 1.1em;
+  font-weight: 700;
+  margin: 0px;
+  line-height: 35px;
+  color: ${(props) => props.theme.colors.strongColor};
+`
 export default function PrivacyPolicy() {
   return (
-    <>
+    <PageRoot>
       <Head>
         <title>Privacy Policy - Lokinet</title>
         <meta name="description" content="Privacy Policy - Lokinet" />
@@ -15,7 +27,7 @@ export default function PrivacyPolicy() {
         <h2>Lokinet Privacy Policy</h2>
         <h3>Lokinet never knows who you are or what websites you visit.</h3>
         <h3>
-          <strong>Lokinet App</strong>
+          <StyledStrong>Lokinet App</StyledStrong>
         </h3>
 
         <p>We are mission-driven to protect your privacy.</p>
@@ -38,7 +50,9 @@ export default function PrivacyPolicy() {
           the service you are accessing.{' '}
         </p>
         <h3>
-          <strong>Using Lokinet on a MacOS or Windows device</strong>
+          <StyledStrong>
+            Using Lokinet on a MacOS or Windows device
+          </StyledStrong>
         </h3>
         <p>
           If you use Lokinet on your macOS or Windows computer, Apple or
@@ -61,7 +75,7 @@ export default function PrivacyPolicy() {
           never records stores, or shares any of this information.
         </p>
         <h3>
-          <strong>Website Privacy Policy</strong>
+          <StyledStrong>Website Privacy Policy</StyledStrong>
         </h3>
         <p>
           The Lokinet website never attempts to link your usage of the website
@@ -95,6 +109,6 @@ export default function PrivacyPolicy() {
           want to say hello — please send us an email at team@oxen.io
         </p>
       </Layout>
-    </>
+    </PageRoot>
   )
 }
