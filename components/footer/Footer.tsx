@@ -5,11 +5,11 @@ import React from 'react'
 import TwitterButton from '../buttons/image-button/social-buttons/TwitterButton'
 import Spacer from '../spacer/Spacer'
 import styled from 'styled-components'
-import Link from 'next/link'
 import { SvgPlusIcon } from '../icons/SvgPlusIcon'
 import { Flex } from '../flex/Flex'
 import { SpacerBorder } from '../icons/SpacerBorder'
 import { PrivacyLinkButton } from '../buttons/InternalLinkButton'
+import { Separator } from '../Separator'
 
 const StyledFooter = styled.footer`
   min-height: 100px;
@@ -39,11 +39,7 @@ export default function Footer() {
   return (
     <StyledFooter>
       <Flex container={true} flexGrow={1} width="100%" flexDirection="column">
-        <Flex container={true} flexGrow={1} alignItems="center">
-          <SvgPlusIcon />
-          <SpacerBorder />
-          <SvgPlusIcon />
-        </Flex>
+        <Separator />
         <StyledBottomFooter>
           <Logo />
           <Spacer />

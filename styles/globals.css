@@ -14,7 +14,7 @@ a {
 * {
   box-sizing: border-box;
   transition: all 0.3s linear;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -23,7 +23,7 @@ h2 {
   line-height: 43px;
   font-weight: 700;
   margin: 0px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   padding-bottom: 7px;
 }
 
@@ -48,53 +48,61 @@ main {
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-400.ttf');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-400.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-500.ttf');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-500.ttf");
   font-style: medium;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-700.ttf');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-700.ttf");
   font-style: bold;
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-900.ttf');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-900.ttf");
   font-style: bold;
   font-weight: 900;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-600.ttf');
+  font-family: "Inter";
+  src: url("/fonts/Inter-600.ttf");
   font-style: bold;
   font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Archivo';
-  src: url('/fonts/Archivo-800.ttf');
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-800.ttf");
   font-style: bold;
   font-weight: 800;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Archivo';
-  src: url('/fonts/Archivo-600.ttf');
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-600.ttf");
   font-style: bold;
   font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Regular.ttf");
+  font-style: bold;
+  font-weight: 400;
   font-display: swap;
 }

@@ -1,10 +1,12 @@
-import Head from 'next/head'
-import React from 'react'
-import styled from 'styled-components'
-import { ExternalLink } from '../components/ExternalLink'
-import Layout from '../components/layout/Layout'
+import Head from "next/head";
+import React from "react";
+import styled from "styled-components";
+import { ExternalLink } from "../components/ExternalLink";
+import { HyperGlobe } from "../components/Hyperglobe";
+import Layout from "../components/layout/Layout";
 
-import { PageRoot } from '../components/layout/PageRoot'
+import { PageRoot } from "../components/layout/PageRoot";
+import { WireframeSphere } from "../components/WireframeSphere";
 
 const StyledStrong = styled.strong`
   font-size: 25px;
@@ -13,7 +15,7 @@ const StyledStrong = styled.strong`
   margin: 0px;
   line-height: 35px;
   color: ${(props) => props.theme.colors.strongColor};
-`
+`;
 export default function PrivacyPolicy() {
   return (
     <PageRoot>
@@ -24,6 +26,7 @@ export default function PrivacyPolicy() {
       </Head>
 
       <Layout>
+        <WireframeSphere />
         <h2>Lokinet Privacy Policy</h2>
         <h3>Lokinet never knows who you are or what websites you visit.</h3>
         <h3>
@@ -35,7 +38,7 @@ export default function PrivacyPolicy() {
           Lokinet is designed so that it doesn’t access, create, or store any
           information which could be used to identify or track you. Lokinet
           doesn’t store any identifying information about your device or
-          connection, such as your IP address.{' '}
+          connection, such as your IP address.{" "}
         </p>
         <p>
           There is no registration process for Lokinet. You don’t need a phone
@@ -47,7 +50,7 @@ export default function PrivacyPolicy() {
           We don’t have control over what services you access using Lokinet.
           They may attempt to track or log information about you. For more
           information, it is important that you refer to the privacy policy of
-          the service you are accessing.{' '}
+          the service you are accessing.{" "}
         </p>
         <h3>
           <StyledStrong>
@@ -63,12 +66,12 @@ export default function PrivacyPolicy() {
           <ExternalLink
             url="https://support.apple.com/en-au/guide/mac-help/mh27990/mac"
             text="MacOS analytics"
-          />{' '}
-          and{' '}
+          />{" "}
+          and{" "}
           <ExternalLink
             url="https://docs.microsoft.com/en-au/windows/privacy/windows-diagnostic-data"
             text="Windows diagnostic data collection"
-          />{' '}
+          />{" "}
           may record app crashes or usage information, depending on your
           personal operating system settings. This is a feature of these
           operating systems and applies to any software you use. Lokinet itself
@@ -80,7 +83,7 @@ export default function PrivacyPolicy() {
         <p>
           The Lokinet website never attempts to link your usage of the website
           to your real identity or create a user profile based on your activity.
-          The Lokinet website can also be accessed anonymously, using Lokinet,{' '}
+          The Lokinet website can also be accessed anonymously, using Lokinet,{" "}
           <ExternalLink
             url="http://inqomcym4rhouwhxhnwcczj3j8ykb4ehxkh3yfqtpjybatdettuo.loki/"
             text="here"
@@ -110,5 +113,5 @@ export default function PrivacyPolicy() {
         </p>
       </Layout>
     </PageRoot>
-  )
+  );
 }
