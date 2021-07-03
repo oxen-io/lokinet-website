@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { HyperGlobe } from "../components/Hyperglobe";
 import { AnimatedPlusIcon } from "../components/icons/AnimatedSvgPlusIcon";
 import { SvgCircleIcon } from "../components/icons/SvgCircleIcon";
-import { SvgMinusIcon } from "../components/icons/SvgMinusIcon";
+import { SvgMinusLongIcon } from "../components/icons/SvgMinusIcon";
 import { SvgPlusIcon } from "../components/icons/SvgPlusIcon";
 import Layout from "../components/layout/Layout";
 import { PageRoot } from "../components/layout/PageRoot";
@@ -71,7 +71,7 @@ const FirstSection = () => {
           {/* <HyperGlobe></HyperGlobe> */}
         </StyledRightSection>
 
-        <SvgMinusIcon />
+        <SvgMinusLongIcon />
       </StyledSection>
       <Separator />
     </>
@@ -95,7 +95,9 @@ const SecondSection = () => {
   return (
     <>
       <StyledSection>
-        <SvgCircleIcon />
+        <BorderIconContainer>
+          <SvgCircleIcon />
+        </BorderIconContainer>
         <StyledLeftSection></StyledLeftSection>
         <StyledRightSection>
           <StyledH3>DECENTRALISED NETWORK</StyledH3>
@@ -114,7 +116,9 @@ const SecondSection = () => {
             location and identity are unknown.
           </StyledSmallText>
         </StyledRightSection>
-        <SvgMinusIcon />
+        <BorderIconContainer>
+          <SvgMinusLongIcon />
+        </BorderIconContainer>
       </StyledSection>
       <Separator />
     </>
@@ -125,6 +129,9 @@ const ThirdSection = () => {
   return (
     <>
       <StyledSection>
+        <BorderIconContainer>
+          <SvgMinusLongIcon />
+        </BorderIconContainer>
         <StyledLeftSection>
           <StyledH3>CENSORSHIP-RESISTANT</StyledH3>
           <StyledSmallText>
@@ -143,6 +150,10 @@ const ThirdSection = () => {
           </StyledSmallText>
         </StyledLeftSection>
         <StyledRightSection></StyledRightSection>
+
+        <BorderIconContainer>
+          <AnimatedPlusIcon />
+        </BorderIconContainer>
       </StyledSection>
     </>
   );

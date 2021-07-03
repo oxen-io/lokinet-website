@@ -1,10 +1,11 @@
-import Head from 'next/head'
-import React from 'react'
-import { Accordion, AccordionSection } from '../components/Accordion'
-import { ExternalLink } from '../components/ExternalLink'
-import { Flex } from '../components/flex/Flex'
-import Layout from '../components/layout/Layout'
-import { PageRoot } from '../components/layout/PageRoot'
+import Head from "next/head";
+import React from "react";
+import { Accordion, AccordionSection } from "../components/Accordion";
+import { ExternalLink } from "../components/ExternalLink";
+import { Flex } from "../components/flex/Flex";
+import Layout from "../components/layout/Layout";
+import { PageRoot } from "../components/layout/PageRoot";
+
 export default function Faq() {
   return (
     <PageRoot>
@@ -20,6 +21,7 @@ export default function Faq() {
           width="100%"
           flexDirection="column"
           alignItems="flex-start"
+          padding="30px 0px"
         >
           <h2>Introduction</h2>
           <Accordion>
@@ -154,10 +156,10 @@ export default function Faq() {
                 ONS provides human readable, globally unique mappings to
                 cryptographically secure long form .loki addresses. ONS names
                 are stored and indexed on the Oxen blockchain as transactions
-                using a similar scheme to{' '}
-                <ExternalLink text="Namecoin" url="https://www.namecoin.org/" />{' '}
+                using a similar scheme to{" "}
+                <ExternalLink text="Namecoin" url="https://www.namecoin.org/" />{" "}
                 or <ExternalLink text="ENS" url="https://ens.domains/" />. You
-                can read more about ONS (previously called Loki name system){' '}
+                can read more about ONS (previously called Loki name system){" "}
                 <ExternalLink
                   text="here"
                   url="https://github.com/oxen-io/oxen-core/issues/342"
@@ -171,7 +173,7 @@ export default function Faq() {
               <p>
                 ONS records are purchased using the OXEN cryptocurrency. By
                 burning OXEN, you can register a Lokinet name for up to 10
-                years. This can be done using the{' '}
+                years. This can be done using the{" "}
                 <ExternalLink
                   text="Oxen GUI wallet"
                   url="https://docs.oxen.io/downloads"
@@ -187,11 +189,11 @@ export default function Faq() {
             </AccordionSection>
             <AccordionSection title="WHAT PROTOCOL DOES LOKINET USE?">
               <p>
-                Lokinet is the reference implementation of{' '}
+                Lokinet is the reference implementation of{" "}
                 <ExternalLink
                   text="LLARP"
                   url="https://github.com/majestrate/llarp"
-                />{' '}
+                />{" "}
                 (Low-Latency Anonymous Routing Protocol), a next-generation
                 onion routing protocol that aims to address issues with Tor and
                 I2P.
@@ -233,7 +235,7 @@ export default function Faq() {
             <AccordionSection title="HOW DO I USE LOKINET?">
               <p>
                 You can use Lokinet on Windows, macOS, and Linux — and it’s easy
-                to get up and running. Just go{' '}
+                to get up and running. Just go{" "}
                 <ExternalLink
                   text="here"
                   url="https://github.com/oxen-io/loki-network/releases"
@@ -242,7 +244,7 @@ export default function Faq() {
                 easy steps to enable Lokinet. You can then start browsing
                 securely, privately, and anonymously. If you prefer to build the
                 Lokinet client from source directly, you can find the source
-                code on the{' '}
+                code on the{" "}
                 <ExternalLink
                   text="Lokinet
                 GitHub"
@@ -319,11 +321,11 @@ export default function Faq() {
             </AccordionSection>
             <AccordionSection title="WHO MADE LOKINET?">
               <p>
-                Lokinet is developed by{' '}
+                Lokinet is developed by{" "}
                 <ExternalLink text="OPTF" url="https://optf.ngo/" />,
                 Australia’s first not-for-profit privacy tech organisation.
                 Lokinet is part of the OPTF’s suite of blockchain-based privacy
-                tools that also includes the encrypted messaging app{' '}
+                tools that also includes the encrypted messaging app{" "}
                 <ExternalLink text="Session" url="https://getsession.org/" />,
                 and the Oxen cryptocurrency itself.
               </p>
@@ -336,11 +338,11 @@ export default function Faq() {
               </p>
               <p>
                 The larger the network, the stronger and more resilient Lokinet
-                will become. Visit the official{' '}
+                will become. Visit the official{" "}
                 <ExternalLink
                   url="https://docs.oxen.io/using-the-oxen-blockchain/oxen-service-node-guides"
                   text="Oxen documentation"
-                />{' '}
+                />{" "}
                 for more information about how to run a service node.
               </p>
               <p>
@@ -455,5 +457,5 @@ export default function Faq() {
         </Flex>
       </Layout>
     </PageRoot>
-  )
+  );
 }

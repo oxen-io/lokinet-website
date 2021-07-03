@@ -2,18 +2,18 @@ import styled from "styled-components";
 import Icon from "./Icon";
 
 const Svg = styled(Icon)`
-  width: 32px;
+  width: 40px;
   height: auto;
   color: ${(props) => props.theme.colors.secondary};
 `;
 
 export const SvgPlusIcon = () => (
-  <Svg viewBox="0 0 1000 1000">
+  <Svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path
-      fill="currentColor"
-      d="M512 150v337h338v25H512v338h-25V512H150v-25h337V150h25"
-      strokeWidth={30}
-      stroke="black"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1}
+      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
     />
   </Svg>
 );
