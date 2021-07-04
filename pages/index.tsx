@@ -11,8 +11,11 @@ import { PageRoot } from "../components/layout/PageRoot";
 import { Separator } from "../components/Separator";
 
 import { TextFaqButton } from "../components/buttons/TextButton";
+import { DownloadLokinet } from "../components/DownloadLokinet";
+import Spacer from "../components/spacer/Spacer";
 
 const StyledTitle = styled.h1`
+import { DownloadLokinet } from "../components/DownloadLokinet";
   font-family: "Inter", Sans-serif;
   font-weight: 600;
   font-size: 43px;
@@ -70,6 +73,7 @@ const FirstSection = () => {
             – Block surveillance
             <br />– Discover private websites
           </StyledP>
+          <DownloadLokinet />
         </StyledLeftSection>
         <StyledRightSection maxWidth="60%">
           <WireframeSphere />

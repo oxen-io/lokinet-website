@@ -20,10 +20,9 @@ const StyledTextButton = styled.div`
   font-weight: 600;
   font-size: 12px;
   font-family: "Archivo", Sans-serif;
-  padding: var(--margins-sm) var(--margins-lg);
-  margin: var(--margins-sm) var(--margins-lg);
+  padding: var(--margins-sm) var(--margins-xl);
   letter-spacing: 1.6px;
-  margin-left: 0;
+  margin-top: var(--margins-lg);
 `;
 
 export const TextFaqButton = () => {
@@ -31,5 +30,13 @@ export const TextFaqButton = () => {
     <Link href="/faq" passHref={true}>
       <StyledTextButton>FREQUENTLY ASKED QUESTIONS</StyledTextButton>
     </Link>
+  );
+};
+
+export const TextDownloadLokinetButton = (props: { onClick: () => void }) => {
+  return (
+    <a onClick={props.onClick}>
+      <StyledTextButton>DOWNLOAD LOKINET</StyledTextButton>
+    </a>
   );
 };
