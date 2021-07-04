@@ -15,22 +15,10 @@ const common = {
 };
 
 export const light = {
-  colors: {
-    primary: "white",
-    secondary: "black",
-    strongColor: "rgb(58, 58, 58)",
-    borderAccordion: "rgb(212, 212, 212)",
-  },
   ...common,
 };
 
 export const dark: ThemeType = {
-  colors: {
-    primary: "black",
-    secondary: "white",
-    strongColor: "white",
-    borderAccordion: "white",
-  },
   ...common,
 };
 

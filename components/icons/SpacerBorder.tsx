@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledSpacerBorder = styled.div`
   flex-grow: 1;
   background: red;
   height: 1px;
   margin: ${(props) => props.theme.margins.md};
-  background: ${(props) => props.theme.colors.secondary};
-`
+  background: var(--color-text);
+`;
 
 export const SpacerBorder = () => {
-  return <StyledSpacerBorder />
-}
+  return <StyledSpacerBorder />;
+};

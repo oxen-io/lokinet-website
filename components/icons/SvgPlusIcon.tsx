@@ -4,7 +4,7 @@ import Icon from "./Icon";
 const Svg = styled(Icon)`
   width: 40px;
   height: auto;
-  color: ${(props) => props.theme.colors.secondary};
+  color: var(--color-text);
 `;
 
 export const SvgPlusIcon = () => (

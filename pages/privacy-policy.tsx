@@ -5,7 +5,6 @@ import { ExternalLink } from "../components/ExternalLink";
 import Layout from "../components/layout/Layout";
 
 import { PageRoot } from "../components/layout/PageRoot";
-import { WireframeSphere } from "../components/WireframeSphere";
 
 const StyledStrong = styled.strong`
   font-size: 25px;
@@ -13,7 +12,7 @@ const StyledStrong = styled.strong`
   font-weight: 700;
   margin: 0px;
   line-height: 35px;
-  color: ${(props) => props.theme.colors.strongColor};
+  color: var(--color-secondary);
 `;
 export default function PrivacyPolicy() {
   return (

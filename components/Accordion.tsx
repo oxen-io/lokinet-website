@@ -12,7 +12,7 @@ const StyledSectionTitle = styled.a`
   font-weight: 600;
   cursor: pointer;
 
-  border-bottom: 1px solid ${(props) => props.theme.colors.borderAccordion};
+  border-bottom: 1px solid var(--color-border-accordion);
 `;
 
 const StyledLi = styled.li<{ isExpanded: boolean }>`
@@ -21,7 +21,7 @@ const StyledLi = styled.li<{ isExpanded: boolean }>`
   flex-direction: column;
   font-family: Roboto, sans-serif;
   border-bottom: ${(props) => (props.isExpanded ? "1px" : "0px")} solid
-    ${(props) => props.theme.colors.borderAccordion};
+    var(--color-border-accordion);
 `;
 
 const SvgBold = styled(Icon)`
@@ -29,7 +29,7 @@ const SvgBold = styled(Icon)`
   height: auto;
   margin-left: ${(props) => props.theme.margins.lg};
   margin-right: ${(props) => props.theme.margins.lg};
-  color: ${(props) => props.theme.colors.secondary};
+  color: var(--color-text);
 `;
 
 export const SvgPlusIconBold = () => (
@@ -107,10 +107,10 @@ const StyledAccordion = styled.ul`
   margin-top: ${(props) => props.theme.margins.md};
   margin-bottom: ${(props) => props.theme.margins.md};
 
-  border-left: 1px solid ${(props) => props.theme.colors.borderAccordion};
-  border-right: 1px solid ${(props) => props.theme.colors.borderAccordion};
+  border-left: 1px solid var(--color-border-accordion);
+  border-right: 1px solid var(--color-border-accordion);
   li:first-child {
-    border-top: 1px solid ${(props) => props.theme.colors.borderAccordion};
+    border-top: 1px solid var(--color-border-accordion);
   }
   list-style-type: none;
 `;

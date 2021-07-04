@@ -1,14 +1,14 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledPageRoot = styled.div`
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.secondary};
+  background-color: var(--color-background);
+  color: var(--color-text);
   width: 100%;
   height: 100%;
   min-width: 100vw;
   min-height: 100vh;
-`
+`;
 
 export const PageRoot = (props: { children: React.ReactNode }) => {
-  return <StyledPageRoot>{props.children}</StyledPageRoot>
-}
+  return <StyledPageRoot>{props.children}</StyledPageRoot>;
+};

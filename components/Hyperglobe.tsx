@@ -32,7 +32,7 @@ const StyledHyperGlobe = styled.div`
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border: 1px dashed ${(props) => props.theme.colors.secondary};
+    border: 1px dashed var(--color-text);
     position: absolute;
     top: 50%;
     left: 91.35%;

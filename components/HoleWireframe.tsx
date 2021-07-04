@@ -111,7 +111,7 @@ function AnimatedSphere(props: JSX.IntrinsicElements["mesh"]) {
     <mesh {...props} ref={mesh}>
       <sphereGeometry args={[300, 20, 20]} />
       <meshStandardMaterial
-        color={theme.colors.secondary}
+        color="var(--color-text)"
         wireframe={true}
         wireframeLinewidth={1}
       />

@@ -6,7 +6,7 @@ const Svg = styled(Icon)`
   height: auto;
   margin-left: ${(props) => props.theme.margins.lg};
   margin-right: ${(props) => props.theme.margins.lg};
-  color: ${(props) => props.theme.colors.secondary};
+  color: var(--color-text);
 `;
 
 export const SvgMinusLongIcon = () => (

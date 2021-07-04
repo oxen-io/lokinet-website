@@ -21,7 +21,7 @@ export default function Logo() {
     <StyledContainer>
       <Link href="/" passHref={true}>
         <a>
-          <SvgComponent fill={theme.colors.secondary} />
+          <SvgComponent fill="var(--color-text)" />
         </a>
       </Link>
     </StyledContainer>
