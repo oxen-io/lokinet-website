@@ -4,8 +4,8 @@ import Icon from "./Icon";
 const Svg = styled(Icon)`
   width: 20px;
   height: auto;
-  margin-left: ${(props) => props.theme.margins.lg};
-  margin-right: ${(props) => props.theme.margins.lg};
+  margin-left: var(--margins-lg);
+  margin-right: var(--margins-lg);
   color: var(--color-text);
 `;
 

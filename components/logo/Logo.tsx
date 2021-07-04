@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 
 const StyledContainer = styled.div`
   max-width: 200px;
@@ -16,7 +16,6 @@ function SvgComponent(props: { fill: string }) {
 }
 
 export default function Logo() {
-  const theme = useTheme();
   return (
     <StyledContainer>
       <Link href="/" passHref={true}>

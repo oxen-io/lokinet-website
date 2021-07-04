@@ -1,15 +1,15 @@
-import Logo from '../logo/Logo'
+import Logo from "../logo/Logo";
 
-import TelegramButton from '../buttons/image-button/social-buttons/TelegramButton'
-import React from 'react'
-import TwitterButton from '../buttons/image-button/social-buttons/TwitterButton'
-import Spacer from '../spacer/Spacer'
-import styled from 'styled-components'
-import { SvgPlusIcon } from '../icons/SvgPlusIcon'
-import { Flex } from '../flex/Flex'
-import { SpacerBorder } from '../icons/SpacerBorder'
-import { PrivacyLinkButton } from '../buttons/InternalLinkButton'
-import { Separator } from '../Separator'
+import TelegramButton from "../buttons/image-button/social-buttons/TelegramButton";
+import React from "react";
+import TwitterButton from "../buttons/image-button/social-buttons/TwitterButton";
+import Spacer from "../spacer/Spacer";
+import styled from "styled-components";
+import { SvgPlusIcon } from "../icons/SvgPlusIcon";
+import { Flex } from "../flex/Flex";
+import { SpacerBorder } from "../icons/SpacerBorder";
+import { PrivacyLinkButton } from "../buttons/InternalLinkButton";
+import { Separator } from "../Separator";
 
 const StyledFooter = styled.footer`
   min-height: 100px;
@@ -17,23 +17,23 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-grow: 1;
   width: 100%;
-  padding-left: ${(props) => props.theme.margins.lg};
-  padding-right: ${(props) => props.theme.margins.lg};
-`
+  padding-left: var(--margins-lg);
+  padding-right: var(--margins-lg);
+`;
 
 const StyledBottomFooter = styled.div`
   display: flex;
   flex-grow: 1;
-  width: calc(100% - 2 * ${(props) => props.theme.margins.xxl});
-  margin-left: ${(props) => props.theme.margins.xxl};
-  margin-right: ${(props) => props.theme.margins.xxl};
-  margin-bottom: ${(props) => props.theme.margins.lg};
-  margin-top: ${(props) => props.theme.margins.lg};
+  width: calc(100% - 2 * var(--margins-xxl));
+  margin-left: var(--margins-xxl);
+  margin-right: var(--margins-xxl);
+  margin-bottom: var(--margins-lg);
+  margin-top: var(--margins-lg);
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-`
+`;
 
 export default function Footer() {
   return (
@@ -49,5 +49,5 @@ export default function Footer() {
         </StyledBottomFooter>
       </Flex>
     </StyledFooter>
-  )
+  );
 }

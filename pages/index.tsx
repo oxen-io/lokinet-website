@@ -44,6 +44,9 @@ const StyledP = styled.p`
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 15px;
   font-weight: 400;
+  padding-left: var(--margins-md);
+  padding-top: 0px;
+  margin-top: 0px;
 `;
 
 const BorderIconContainer = styled.div`
@@ -60,11 +63,10 @@ const FirstSection = () => {
         <StyledLeftSection maxWidth="40%">
           <StyledTitle>Anonymous Internet Access</StyledTitle>
           <StyledP>
-            –Browse privately
+            – Browse privately
             <br />
-            –Block surveillance
-            <br />
-            –Discover private websites
+            – Block surveillance
+            <br />– Discover private websites
           </StyledP>
         </StyledLeftSection>
         <StyledRightSection maxWidth="60%">
@@ -82,7 +84,7 @@ const StyledH3 = styled.h3`
   font-weight: 600;
   font-size: 16px;
   font-family: "Archivo", Sans-serif;
-  padding: ${(props) => props.theme.margins.md};
+  padding: var(--margins-md);
 `;
 
 const StyledSmallText = styled.div`

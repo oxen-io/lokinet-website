@@ -1,8 +1,9 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import React, { useEffect, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import React, { useRef } from "react";
 import styled from "styled-components";
-import { Vector3 } from "three";
-import theme from "../theme/theme";
+import THREE, { Vector3, Color } from "three";
+
+import { ThemeContext } from "../theme/theme";
 
 const CanvasContainer = styled.div`
   width: 520px;
@@ -14,18 +15,20 @@ const WireframeContainer = styled.div`
   height: 520px;
 `;
 
-function AnimatedSphere(props: JSX.IntrinsicElements["mesh"]) {
+function AnimatedSphere(
+  props: JSX.IntrinsicElements["mesh"] & { color: string }
+) {
   const mesh = useRef<any>(null!);
   useFrame((_state, _delta) => {
-    mesh.current.rotation.x += 0.002;
-    mesh.current.rotation.y += 0.002;
+    mesh.current.rotation.x += 0.001;
+    mesh.current.rotation.y += 0.001;
   });
 
   return (
     <mesh {...props} ref={mesh}>
       <sphereGeometry args={[550, 20, 20]} />
-      <meshStandardMaterial
-        color="var(--color-text)"
+      <meshBasicMaterial
+        color={props.color}
         wireframe={true}
         wireframeLinewidth={1}
       />
@@ -34,12 +37,22 @@ function AnimatedSphere(props: JSX.IntrinsicElements["mesh"]) {
 }
 
 export const WireframeSphere = () => {
-  const zPos = 2000;
+  const { colorMode } = React.useContext(ThemeContext);
+  let color = "black";
+
+  if (colorMode === "dark") {
+    color = "white";
+  }
+  console.warn("colorMode", colorMode);
+
   return (
     <WireframeContainer>
       <CanvasContainer>
-        <Canvas camera={{ position: new Vector3(0, 0, 1000), far: 3000 }}>
-          <AnimatedSphere />
+        <Canvas
+          gl={{ antialias: false, autoClear: true, autoClearDepth: true }}
+          camera={{ position: new Vector3(0, 0, 1700), far: 3000, zoom: 2 }}
+        >
+          <AnimatedSphere color={color} />
         </Canvas>
       </CanvasContainer>
     </WireframeContainer>

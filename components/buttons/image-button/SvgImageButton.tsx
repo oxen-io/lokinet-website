@@ -10,8 +10,8 @@ const StyledButton = styled.button`
   background-color: var(--color-text);
   color: var(--color-background);
   transition: 0.3s;
-  padding: ${(props) => props.theme.margins.sm};
-  margin: ${(props) => props.theme.margins.sm};
+  padding: var(--margins-sm);
+  margin: var(--margins-sm);
   &:hover {
     filter: invert(1);
   }

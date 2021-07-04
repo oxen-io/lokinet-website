@@ -4,7 +4,7 @@ const StyledSpacerBorder = styled.div`
   flex-grow: 1;
   background: red;
   height: 1px;
-  margin: ${(props) => props.theme.margins.md};
+  margin: var(--margins-md);
   background: var(--color-text);
 `;
 

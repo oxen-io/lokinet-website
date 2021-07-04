@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledLink = styled.a`
   border-bottom: solid 1px var(--color-text);
-  transition: all ${(props) => props.theme.duration.linkBottom} linear;
+  transition: all var(--duration-linkBottom) linear;
 
   &:hover {
     border-bottom: solid 1px rgba(0, 0, 0, 0);

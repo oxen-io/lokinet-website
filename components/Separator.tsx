@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-grow: 1;
   align-items: center;
-  padding: 0 ${(props) => props.theme.margins.lg};
+  padding: 0 var(--margins-lg);
 `;
 
 export const Separator = () => {

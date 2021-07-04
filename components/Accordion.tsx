@@ -4,7 +4,7 @@ import Icon from "./icons/Icon";
 
 const StyledSectionTitle = styled.a`
   width: 100%;
-  padding: ${(props) => props.theme.margins.md};
+  padding: var(--margins-md);
 
   display: flex;
   font-family: Archivo, sans-serif;
@@ -27,8 +27,8 @@ const StyledLi = styled.li<{ isExpanded: boolean }>`
 const SvgBold = styled(Icon)`
   width: 20px;
   height: auto;
-  margin-left: ${(props) => props.theme.margins.lg};
-  margin-right: ${(props) => props.theme.margins.lg};
+  margin-left: var(--margins-lg);
+  margin-right: var(--margins-lg);
   color: var(--color-text);
 `;
 
@@ -75,10 +75,10 @@ export const AccordionSection = (props: any) => {
 };
 
 const StyledContent = styled.div<{ isExpanded: boolean }>`
-  padding-top: ${(props) => (props.isExpanded ? props.theme.margins.xl : 0)};
-  padding-bottom: ${(props) => (props.isExpanded ? props.theme.margins.xl : 0)};
-  padding-right: ${(props) => props.theme.margins.xl};
-  padding-left: ${(props) => props.theme.margins.xl};
+  padding-top: ${(props) => (props.isExpanded ? "var(--margins-xl)" : 0)};
+  padding-bottom: ${(props) => (props.isExpanded ? "var(--margins-xl)" : 0)};
+  padding-right: var(--margins-xl);
+  padding-left: var(--margins-xl);
   padding-right: 400px;
 
   transform: ${(props) =>
@@ -104,8 +104,8 @@ export const AccordionSectionContent = (props: {
 const StyledAccordion = styled.ul`
   width: 100%;
   padding: 0;
-  margin-top: ${(props) => props.theme.margins.md};
-  margin-bottom: ${(props) => props.theme.margins.md};
+  margin-top: var(--margins-md);
+  margin-bottom: var(--margins-md);
 
   border-left: 1px solid var(--color-border-accordion);
   border-right: 1px solid var(--color-border-accordion);

@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledInternalLinkButton = styled.a`
-  margin-right: ${(props) => props.theme.margins.lg};
+  margin-right: var(--margins-lg);
   border-bottom: solid 1px var(--color-text);
-  transition: all ${(props) => props.theme.duration.linkBottom} linear;
+  transition: all var(--duration-linkBottom) linear;
   white-space: nowrap;
 
   &:hover {
@@ -17,7 +17,7 @@ const StyledPrivacyLink = styled(StyledInternalLinkButton)``;
 const StyledFaqLink = styled(StyledInternalLinkButton)`
   font-weight: 800;
   font-family: "Archivo", Sans-serif;
-  padding: ${(props) => props.theme.margins.md};
+  padding: var(--margins-md);
   border-bottom: solid 3px var(--color-text);
 `;
 

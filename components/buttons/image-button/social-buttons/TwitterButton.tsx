@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTheme } from 'styled-components'
 import SvgImageButton from '../SvgImageButton'
 
 const twitterURL = 'https://twitter.com/Lokinet_org'
