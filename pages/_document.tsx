@@ -101,7 +101,7 @@ export default class MyDocument extends Document {
             root.style.setProperty('--margins-lg', '20px');
             root.style.setProperty('--margins-xl', '30px');
             root.style.setProperty('--margins-xxl', '70px');
-            root.style.setProperty('--duration-linkBottom', '0.2');
+            root.style.setProperty('--duration-linkBottom', '0.1s');
 
       root.style.setProperty('--initial-color-mode', colorMode);
 

@@ -5,11 +5,11 @@ import styled from "styled-components";
 const StyledInternalLinkButton = styled.a`
   margin-right: var(--margins-lg);
   border-bottom: solid 1px var(--color-text);
-  transition: all var(--duration-linkBottom) linear;
+  transition: border var(--duration-linkBottom) linear;
   white-space: nowrap;
 
   &:hover {
-    border-bottom: solid 1px rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
   }
 `;
 

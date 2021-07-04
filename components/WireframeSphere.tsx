@@ -43,7 +43,6 @@ export const WireframeSphere = () => {
   if (colorMode === "dark") {
     color = "white";
   }
-  console.warn("colorMode", colorMode);
 
   return (
     <WireframeContainer>

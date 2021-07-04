@@ -10,6 +10,8 @@ import Layout from "../components/layout/Layout";
 import { PageRoot } from "../components/layout/PageRoot";
 import { Separator } from "../components/Separator";
 
+import { TextFaqButton } from "../components/buttons/TextButton";
+
 const StyledTitle = styled.h1`
   font-family: "Inter", Sans-serif;
   font-weight: 600;
@@ -152,6 +154,7 @@ const ThirdSection = () => {
             Lokinet can work with any application. Easily integrate Lokinet with
             the tools you already use.
           </StyledSmallText>
+          <TextFaqButton />
         </StyledLeftSection>
         <StyledRightSection maxWidth="60%"></StyledRightSection>
 
