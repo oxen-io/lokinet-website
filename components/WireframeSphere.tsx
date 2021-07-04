@@ -1,11 +1,12 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import { Vector3 } from "three";
 import theme from "../theme/theme";
 
 const CanvasContainer = styled.div`
-  width: 1040px;
-  height: 1040px;
+  width: 520px;
+  height: 520px;
 `;
 
 const WireframeContainer = styled.div`
@@ -22,7 +23,7 @@ function AnimatedSphere(props: JSX.IntrinsicElements["mesh"]) {
 
   return (
     <mesh {...props} ref={mesh}>
-      <sphereGeometry args={[300, 20, 20]} />
+      <sphereGeometry args={[550, 20, 20]} />
       <meshStandardMaterial
         color={theme.colors.secondary}
         wireframe={true}
@@ -33,10 +34,11 @@ function AnimatedSphere(props: JSX.IntrinsicElements["mesh"]) {
 }
 
 export const WireframeSphere = () => {
+  const zPos = 2000;
   return (
     <WireframeContainer>
       <CanvasContainer>
-        <Canvas>
+        <Canvas camera={{ position: new Vector3(0, 0, 1000), far: 3000 }}>
           <AnimatedSphere />
         </Canvas>
       </CanvasContainer>

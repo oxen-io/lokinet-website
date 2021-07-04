@@ -2,7 +2,6 @@ import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
 import { ExternalLink } from "../components/ExternalLink";
-import { HyperGlobe } from "../components/Hyperglobe";
 import Layout from "../components/layout/Layout";
 
 import { PageRoot } from "../components/layout/PageRoot";
@@ -26,7 +25,6 @@ export default function PrivacyPolicy() {
       </Head>
 
       <Layout>
-        <WireframeSphere />
         <h2>Lokinet Privacy Policy</h2>
         <h3>Lokinet never knows who you are or what websites you visit.</h3>
         <h3>

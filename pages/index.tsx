@@ -1,11 +1,11 @@
 import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
+import { WireframeSphere } from "../components/WireframeSphere";
 import { HyperGlobe } from "../components/Hyperglobe";
 import { AnimatedPlusIcon } from "../components/icons/AnimatedSvgPlusIcon";
 import { SvgCircleIcon } from "../components/icons/SvgCircleIcon";
 import { SvgMinusLongIcon } from "../components/icons/SvgMinusIcon";
-import { SvgPlusIcon } from "../components/icons/SvgPlusIcon";
 import Layout from "../components/layout/Layout";
 import { PageRoot } from "../components/layout/PageRoot";
 import { Separator } from "../components/Separator";
@@ -23,15 +23,15 @@ const StyledSection = styled.section`
   align-items: center;
 `;
 
-const StyledLeftSection = styled.div`
-  max-width: 50%;
+const StyledLeftSection = styled.div<{ maxWidth: string }>`
+  max-width: ${(props) => props.maxWidth};
   display: flex;
   flex-grow: 1;
   flex-direction: column;
 `;
 
-const StyledRightSection = styled.div`
-  max-width: 50%;
+const StyledRightSection = styled.div<{ maxWidth: string }>`
+  max-width: ${(props) => props.maxWidth};
 
   display: flex;
   flex-grow: 1;
@@ -57,7 +57,7 @@ const FirstSection = () => {
         <BorderIconContainer>
           <AnimatedPlusIcon />
         </BorderIconContainer>
-        <StyledLeftSection>
+        <StyledLeftSection maxWidth="40%">
           <StyledTitle>Anonymous Internet Access</StyledTitle>
           <StyledP>
             –Browse privately
@@ -67,8 +67,8 @@ const FirstSection = () => {
             –Discover private websites
           </StyledP>
         </StyledLeftSection>
-        <StyledRightSection>
-          {/* <HyperGlobe></HyperGlobe> */}
+        <StyledRightSection maxWidth="60%">
+          <WireframeSphere />
         </StyledRightSection>
 
         <SvgMinusLongIcon />
@@ -98,8 +98,10 @@ const SecondSection = () => {
         <BorderIconContainer>
           <SvgCircleIcon />
         </BorderIconContainer>
-        <StyledLeftSection></StyledLeftSection>
-        <StyledRightSection>
+        <StyledLeftSection maxWidth="60%">
+          <HyperGlobe />
+        </StyledLeftSection>
+        <StyledRightSection maxWidth="40%">
           <StyledH3>DECENTRALISED NETWORK</StyledH3>
           <StyledSmallText>
             Lokinet is powered by a decentralised network of staked nodes.
@@ -132,7 +134,7 @@ const ThirdSection = () => {
         <BorderIconContainer>
           <SvgMinusLongIcon />
         </BorderIconContainer>
-        <StyledLeftSection>
+        <StyledLeftSection maxWidth="40%">
           <StyledH3>CENSORSHIP-RESISTANT</StyledH3>
           <StyledSmallText>
             With no central authority controlling the network, content hosted
@@ -149,7 +151,7 @@ const ThirdSection = () => {
             the tools you already use.
           </StyledSmallText>
         </StyledLeftSection>
-        <StyledRightSection></StyledRightSection>
+        <StyledRightSection maxWidth="60%"></StyledRightSection>
 
         <BorderIconContainer>
           <AnimatedPlusIcon />
