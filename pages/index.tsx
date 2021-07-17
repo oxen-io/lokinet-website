@@ -150,8 +150,8 @@ const ThirdSection = () => {
           </StyledSmallText>
           <StyledH3>CROSS PLATFORM</StyledH3>
           <StyledSmallText>
-            Lokinet clients are available for macOS, Windows, and Linux. Mobile
-            clients are currently being developed.
+            Lokinet clients are available for Windows and Linux. macOS and
+            Mobile clients are currently being developed.
           </StyledSmallText>
           <StyledH3>EASY TO USE</StyledH3>
           <StyledSmallText>
