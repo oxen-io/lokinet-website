@@ -4,16 +4,58 @@ import styled from "styled-components";
 import { Shader, Vector3 } from "three";
 
 import { ThemeContext } from "../theme/theme";
+import { Flex } from "./flex/Flex";
+import Icon from "../components/icons/Icon";
 
 const CanvasContainer = styled.div`
-  width: 520px;
-  height: 520px;
+  width: 448px;
+  height: 298px;
 `;
 
 const WireframeContainer = styled.div`
-  width: 520px;
-  height: 520px;
+  width: 448px;
+  height: 298px;
+  border: var(--color-text) solid 1px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
+
+const Title = styled.div`
+  font-family: "Roboto" sans-serif;
+  font-size: 15px;
+  flex-grow: 1;
+`;
+
+const FlexTitle = styled.div`
+  display: flex;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: var(--color-text) solid 1px;
+  border-bottom: none;
+  align-items: center;
+`;
+
+const Svg = styled(Icon)`
+  width: 24px;
+  height: auto;
+  color: var(--color-text);
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(45deg);
+`;
+
+const SvgPlusTinyIcon = () => (
+  <Svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1}
+      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+    />
+  </Svg>
+);
 
 function AnimatedHole(
   props: JSX.IntrinsicElements["mesh"] & { color: string }
@@ -24,8 +66,10 @@ function AnimatedHole(
   const time = { value: 0 };
 
   const colorArray = new Float32Array(1);
-  useFrame((_state, _delta) => {
-    time.value = time.value + _delta;
+  useFrame((state, delta) => {
+    time.value = time.value + delta;
+    state.camera.lookAt(0, 0.5, 0);
+    state.camera.updateProjectionMatrix();
   });
 
   const oBC = useCallback(
@@ -62,7 +106,6 @@ function AnimatedHole(
     <instancedMesh ref={meshRef} count={1}>
       <cylinderBufferGeometry attach="geometry" args={[1, 1, 1, 30, 30, true]}>
         <instancedBufferAttribute
-          // ref={colorAttrib}
           args={[colorArray, 1]}
           attachObject={["attributes", "color"]}
         />
@@ -86,17 +129,24 @@ export const HoleWireFrame = () => {
   }
 
   return (
-    <WireframeContainer>
-      <CanvasContainer>
-        <Canvas
-          gl={{ antialias: true, autoClear: true, autoClearDepth: true }}
-          camera={{
-            position: new Vector3(3, 3, 3),
-          }}
-        >
-          <AnimatedHole color={color} />
-        </Canvas>
-      </CanvasContainer>
-    </WireframeContainer>
+    <Flex>
+      <FlexTitle>
+        <Title>LOKINET</Title>
+        <SvgPlusTinyIcon />
+      </FlexTitle>
+      <WireframeContainer>
+        <CanvasContainer>
+          <Canvas
+            gl={{ antialias: true, autoClear: true, autoClearDepth: true }}
+            camera={{
+              position: new Vector3(3, 3, 3),
+              zoom: 1.5,
+            }}
+          >
+            <AnimatedHole color={color} />
+          </Canvas>
+        </CanvasContainer>
+      </WireframeContainer>
+    </Flex>
   );
 };
