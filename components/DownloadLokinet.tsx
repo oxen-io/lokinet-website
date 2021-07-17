@@ -16,6 +16,9 @@ const Container = styled.section`
 const DownloadIconsContainer = styled.section<{ isVisible: boolean }>`
   padding-top: var(--margins-md);
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
+  pointer-events: ${(props) => (props.isVisible ? "default" : "none")};
+  cursor: ${(props) => (props.isVisible ? "pointer" : "default")};
+  text-decoration: ${(props) => (props.isVisible ? "pointer" : "none")};
 `;
 
 const DownloadIconButton = styled.button`
@@ -90,6 +93,7 @@ export const DownloadLokinet = () => {
           setIsExpanded(!isExpanded);
         }}
       />
+
       <DownloadIconsContainer isVisible={isExpanded}>
         <WindowsDownloadButton />
         <LinuxDownloadButton />
