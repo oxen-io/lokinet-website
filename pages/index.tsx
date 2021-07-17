@@ -13,6 +13,7 @@ import { Separator } from "../components/Separator";
 import { TextFaqButton } from "../components/buttons/TextButton";
 import { DownloadLokinet } from "../components/DownloadLokinet";
 import Spacer from "../components/spacer/Spacer";
+import { HoleWireFrame } from "../components/HoleWireframe";
 
 const StyledTitle = styled.h1`
 import { DownloadLokinet } from "../components/DownloadLokinet";
@@ -160,7 +161,9 @@ const ThirdSection = () => {
           </StyledSmallText>
           <TextFaqButton />
         </StyledLeftSection>
-        <StyledRightSection maxWidth="60%"></StyledRightSection>
+        <StyledRightSection maxWidth="60%">
+          <HoleWireFrame />
+        </StyledRightSection>
 
         <BorderIconContainer>
           <AnimatedPlusIcon />

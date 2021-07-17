@@ -1,7 +1,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
 import styled from "styled-components";
-import THREE, { Vector3, Color } from "three";
+import { Vector3 } from "three";
 
 import { ThemeContext } from "../theme/theme";
 
