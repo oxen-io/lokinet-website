@@ -18,7 +18,15 @@ a {
   -webkit-font-smoothing: antialiased;
   transition: background-color 100ms linear, color 0ms linear;
 }
+::-moz-selection {
+  color: var(--color-background);
+  background: var(--color-text);
+}
 
+::selection {
+  color: var(--color-background);
+  background: var(--color-text);
+}
 h2 {
   font-size: 43px;
   line-height: 43px;

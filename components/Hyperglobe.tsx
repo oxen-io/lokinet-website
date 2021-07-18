@@ -10,6 +10,10 @@ const StyledHyperGlobe = styled.div`
   -moz-animation: spin 4s linear infinite;
   animation: spin 60s linear infinite;
 
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
   @-moz-keyframes spin {
     100% {
       -moz-transform: rotate(360deg);

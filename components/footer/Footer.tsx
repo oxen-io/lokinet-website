@@ -15,8 +15,8 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-grow: 1;
   width: 100%;
-  padding-left: var(--margins-lg);
-  padding-right: var(--margins-lg);
+
+  margin-top: var(--margins-lg);
 `;
 
 const StyledBottomFooter = styled.div`
@@ -31,9 +31,23 @@ const StyledBottomFooter = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 `;
 
 const ButtonContainer = styled.span``;
+
+const PrivacyAndButtonsFlex = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+`;
 
 export default function Footer() {
   return (
@@ -42,12 +56,13 @@ export default function Footer() {
         <Separator />
         <StyledBottomFooter>
           <Logo />
-          <Spacer />
-          <PrivacyLinkButton />
-          <ButtonContainer>
-            <TwitterButton />
-            <TelegramButton />
-          </ButtonContainer>
+          <PrivacyAndButtonsFlex>
+            <PrivacyLinkButton />
+            <ButtonContainer>
+              <TwitterButton />
+              <TelegramButton />
+            </ButtonContainer>
+          </PrivacyAndButtonsFlex>
         </StyledBottomFooter>
       </Flex>
     </StyledFooter>

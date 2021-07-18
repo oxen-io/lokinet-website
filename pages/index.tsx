@@ -12,7 +12,6 @@ import { Separator } from "../components/Separator";
 
 import { TextFaqButton } from "../components/buttons/TextButton";
 import { DownloadLokinet } from "../components/DownloadLokinet";
-import Spacer from "../components/spacer/Spacer";
 import { HoleWireFrame } from "../components/HoleWireframe";
 
 const StyledTitle = styled.h1`
@@ -24,22 +23,27 @@ const StyledTitle = styled.h1`
 const StyledSection = styled.section`
   display: flex;
   width: 100%;
-  height: 60vh;
   align-items: center;
-  min-height: 520px;
+  /* min-height: 520px; */
   flex-wrap: wrap;
 
   @media (max-width: 1024px) {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     height: unset;
   }
 `;
 
-const StyledLeftSection = styled.div<{ maxWidth: string }>`
+const StyledLeftSection = styled.div<{
+  maxWidth: string;
+  centerItems?: boolean;
+}>`
   max-width: ${(props) => props.maxWidth};
   display: flex;
   flex-grow: 1;
+  margin: var(--margins-lg);
   flex-direction: column;
+  align-items: ${(props) => (props.centerItems ? "center" : "")};
+
   @media (max-width: 1024px) {
     width: 100%;
     max-width: 100%;
@@ -57,6 +61,8 @@ const StyledRightSection = styled.div<{ maxWidth: string }>`
   @media (max-width: 1024px) {
     width: 100%;
     max-width: 100%;
+    padding-top: var(--margins-lg);
+    padding-bottom: var(--margins-lg);
   }
 `;
 
@@ -70,7 +76,7 @@ const StyledP = styled.p`
 `;
 
 const BorderIconContainer = styled.div`
-  padding: 30px;
+  /* padding: 30px; */
 
   @media (max-width: 1024px) {
     display: none;
@@ -97,8 +103,9 @@ const FirstSection = () => {
         <StyledRightSection maxWidth="60%">
           <WireframeSphere />
         </StyledRightSection>
-
-        <SvgMinusLongIcon />
+        <BorderIconContainer>
+          <SvgMinusLongIcon />
+        </BorderIconContainer>
       </StyledSection>
       <Separator />
     </>
@@ -125,7 +132,7 @@ const SecondSection = () => {
         <BorderIconContainer>
           <SvgCircleIcon />
         </BorderIconContainer>
-        <StyledLeftSection maxWidth="60%">
+        <StyledLeftSection maxWidth="60%" centerItems={true}>
           <HyperGlobe />
         </StyledLeftSection>
         <StyledRightSection maxWidth="40%">

@@ -4,8 +4,8 @@ import Icon from "./Icon";
 const Svg = styled(Icon)`
   width: 20px;
   height: auto;
-  margin-left: var(--margins-lg);
-  margin-right: var(--margins-lg);
+  /* margin-left: var(--margins-sm);
+  margin-right: var(--margins-sm); */
   color: var(--color-text);
 `;
 

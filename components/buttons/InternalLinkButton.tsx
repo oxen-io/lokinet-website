@@ -13,7 +13,14 @@ const StyledInternalLinkButton = styled.a`
   }
 `;
 
-const StyledPrivacyLink = styled(StyledInternalLinkButton)``;
+const StyledPrivacyLink = styled(StyledInternalLinkButton)`
+  height: fit-content;
+  align-self: center;
+
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
+`;
 const StyledFaqLink = styled(StyledInternalLinkButton)`
   font-weight: 800;
   font-family: "Archivo", Sans-serif;

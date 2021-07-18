@@ -9,11 +9,15 @@ const CanvasContainer = styled.div`
   width: 520px;
   height: 520px;
   max-width: 100%;
+
+  @media (max-width: 1024px) {
+    max-width: calc(100vw - 2 * var(--margins-lg));
+    max-height: calc(100vw - 2 * var(--margins-lg));
+  }
 `;
 
 const WireframeContainer = styled.div`
   width: 520px;
-  height: 520px;
   max-width: 100%;
 `;
 

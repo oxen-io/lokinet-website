@@ -10,11 +10,14 @@ import Icon from "../components/icons/Icon";
 const CanvasContainer = styled.div`
   width: 448px;
   height: 298px;
+  max-width: 100%;
 `;
 
 const WireframeContainer = styled.div`
   width: 448px;
   height: 298px;
+  max-width: 100%;
+
   border: var(--color-text) solid 1px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -129,7 +132,7 @@ export const HoleWireFrame = () => {
   }
 
   return (
-    <Flex>
+    <Flex maxWidth="100%">
       <FlexTitle>
         <Title>LOKINET</Title>
         <SvgPlusTinyIcon />

@@ -7,11 +7,11 @@ export const ContainerSeparator = styled.div`
   display: flex;
   flex-grow: 1;
   align-items: center;
-  padding: 0 var(--margins-lg);
+  /* padding: 0 var(--margins-lg); */
 `;
 
 const Svg = styled(Icon)`
-  width: 40px;
+  width: 20px;
   height: auto;
   color: var(--color-text);
 
@@ -23,12 +23,12 @@ const Svg = styled(Icon)`
 `;
 
 export const SvgPlusIcon = () => (
-  <Svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <Svg fill="none" viewBox="0 0 13 13" stroke="currentColor">
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1}
-      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+      d="M6.5.5v6m0 0v6m0-6h6m-6 0h-6"
     />
   </Svg>
 );

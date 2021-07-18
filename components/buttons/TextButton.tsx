@@ -20,9 +20,13 @@ const StyledTextButton = styled.div`
   font-weight: 600;
   font-size: 12px;
   font-family: "Archivo", Sans-serif;
-  padding: var(--margins-sm) var(--margins-xl);
+  padding: var(--margins-sm) var(--margins-lg);
   letter-spacing: 1.6px;
   margin-top: var(--margins-lg);
+
+  @media (max-width: 1024px) {
+    align-self: center;
+  }
 `;
 
 export const TextFaqButton = () => {

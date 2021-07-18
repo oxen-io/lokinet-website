@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { TextDownloadLokinetButton } from "./buttons/TextButton";
-import SvgImageButton from "./buttons/image-button/SvgImageButton";
 
 const windowsDownloadUrl = "https://lokinet.org/windows";
 const linuxDownloadUrl = "https://lokinet.org/linux";
@@ -12,8 +11,12 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   padding: var(--margins-sm) var(--margins-lg);
+
+  @media (max-width: 1024px) {
+    align-self: center;
+  }
 `;
-const DownloadIconsContainer = styled.section<{ isVisible: boolean }>`
+const DownloadIconsContainer = styled.span<{ isVisible: boolean }>`
   padding-top: var(--margins-md);
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   pointer-events: ${(props) => (props.isVisible ? "default" : "none")};
