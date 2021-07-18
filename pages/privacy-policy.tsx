@@ -14,6 +14,7 @@ const StyledStrong = styled.strong`
   line-height: 35px;
   color: var(--color-secondary);
 `;
+
 export default function PrivacyPolicy() {
   return (
     <PageRoot>

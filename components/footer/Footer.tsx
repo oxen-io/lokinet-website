@@ -5,9 +5,7 @@ import React from "react";
 import TwitterButton from "../buttons/image-button/social-buttons/TwitterButton";
 import Spacer from "../spacer/Spacer";
 import styled from "styled-components";
-import { SvgPlusIcon } from "../icons/SvgPlusIcon";
 import { Flex } from "../flex/Flex";
-import { SpacerBorder } from "../icons/SpacerBorder";
 import { PrivacyLinkButton } from "../buttons/InternalLinkButton";
 import { Separator } from "../Separator";
 
@@ -35,6 +33,8 @@ const StyledBottomFooter = styled.div`
   flex-direction: row;
 `;
 
+const ButtonContainer = styled.span``;
+
 export default function Footer() {
   return (
     <StyledFooter>
@@ -44,8 +44,10 @@ export default function Footer() {
           <Logo />
           <Spacer />
           <PrivacyLinkButton />
-          <TwitterButton />
-          <TelegramButton />
+          <ButtonContainer>
+            <TwitterButton />
+            <TelegramButton />
+          </ButtonContainer>
         </StyledBottomFooter>
       </Flex>
     </StyledFooter>

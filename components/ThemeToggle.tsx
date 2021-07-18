@@ -77,6 +77,8 @@ const StyledButton = styled.button`
   background: none;
   border: none;
   transition: 0.3s;
+  flex-shrink: 0;
+
   &:hover {
     filter: invert(1);
   }

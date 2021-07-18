@@ -16,7 +16,6 @@ import Spacer from "../components/spacer/Spacer";
 import { HoleWireFrame } from "../components/HoleWireframe";
 
 const StyledTitle = styled.h1`
-import { DownloadLokinet } from "../components/DownloadLokinet";
   font-family: "Inter", Sans-serif;
   font-weight: 600;
   font-size: 43px;
@@ -27,6 +26,13 @@ const StyledSection = styled.section`
   width: 100%;
   height: 60vh;
   align-items: center;
+  min-height: 520px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    height: unset;
+  }
 `;
 
 const StyledLeftSection = styled.div<{ maxWidth: string }>`
@@ -34,6 +40,10 @@ const StyledLeftSection = styled.div<{ maxWidth: string }>`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+  }
 `;
 
 const StyledRightSection = styled.div<{ maxWidth: string }>`
@@ -44,6 +54,10 @@ const StyledRightSection = styled.div<{ maxWidth: string }>`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+  }
 `;
 
 const StyledP = styled.p`
@@ -57,6 +71,10 @@ const StyledP = styled.p`
 
 const BorderIconContainer = styled.div`
   padding: 30px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const FirstSection = () => {

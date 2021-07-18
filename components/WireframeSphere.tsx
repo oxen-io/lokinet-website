@@ -8,11 +8,13 @@ import { ThemeContext } from "../theme/theme";
 const CanvasContainer = styled.div`
   width: 520px;
   height: 520px;
+  max-width: 100%;
 `;
 
 const WireframeContainer = styled.div`
   width: 520px;
   height: 520px;
+  max-width: 100%;
 `;
 
 function AnimatedSphere(

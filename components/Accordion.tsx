@@ -30,6 +30,7 @@ const SvgBold = styled(Icon)`
   margin-left: var(--margins-lg);
   margin-right: var(--margins-lg);
   color: var(--color-text);
+  flex-shrink: 0;
 `;
 
 export const SvgPlusIconBold = () => (
@@ -77,9 +78,12 @@ export const AccordionSection = (props: any) => {
 const StyledContent = styled.div<{ isExpanded: boolean }>`
   padding-top: ${(props) => (props.isExpanded ? "var(--margins-xl)" : 0)};
   padding-bottom: ${(props) => (props.isExpanded ? "var(--margins-xl)" : 0)};
-  padding-right: var(--margins-xl);
   padding-left: var(--margins-xl);
   padding-right: 400px;
+
+  @media (max-width: 1024px) {
+    padding-right: var(--margins-xl);
+  }
 
   transform: ${(props) =>
     props.isExpanded ? "translate(0)" : "translate(-1)"};

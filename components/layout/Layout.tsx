@@ -1,7 +1,7 @@
-import React from 'react'
-import Header from '../header/Header'
-import Footer from '../footer/Footer'
-import styled from 'styled-components'
+import React from "react";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
+import styled from "styled-components";
 
 const StyledContainer = styled.div`
   max-width: 1200px;
@@ -12,11 +12,16 @@ const StyledContainer = styled.div`
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-`
+
+  @media (max-width: 1024px) {
+    margin-left: var(--margins-lg);
+    margin-right: var(--margins-lg);
+  }
+`;
 
 const StyledMain = styled.div`
   width: 100%;
-`
+`;
 
 export default function Layout(props: { children: React.ReactNode }) {
   return (
@@ -25,5 +30,5 @@ export default function Layout(props: { children: React.ReactNode }) {
       <StyledMain>{props.children}</StyledMain>
       <Footer />
     </StyledContainer>
-  )
+  );
 }

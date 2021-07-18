@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SvgPlusIcon } from "./SvgPlusIcon";
+import { SvgPlusIcon } from "../Separator";
 
 const StyledAnimatedPlusIcon = styled.div`
   animation: rotation 40s infinite linear;
