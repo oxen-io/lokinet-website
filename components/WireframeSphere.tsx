@@ -54,7 +54,7 @@ export const WireframeSphere = () => {
     <WireframeContainer>
       <CanvasContainer>
         <Canvas
-          gl={{ antialias: false, autoClear: true, autoClearDepth: true }}
+          gl={{ antialias: true, autoClear: true, autoClearDepth: true }}
           camera={{ position: new Vector3(0, 0, 1700), far: 3000, zoom: 2 }}
         >
           <AnimatedSphere color={color} />
