@@ -26,6 +26,8 @@ const StyledSection = styled.section`
   align-items: center;
   /* min-height: 520px; */
   flex-wrap: wrap;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   @media (max-width: 1024px) {
     flex-wrap: wrap-reverse;
@@ -43,26 +45,34 @@ const StyledLeftSection = styled.div<{
   margin: var(--margins-lg);
   flex-direction: column;
   align-items: ${(props) => (props.centerItems ? "center" : "")};
+  padding-left: 3rem;
 
   @media (max-width: 1024px) {
     width: 100%;
     max-width: 100%;
+    padding-left: 0;
   }
 `;
 
-const StyledRightSection = styled.div<{ maxWidth: string }>`
+const StyledRightSection = styled.div<{
+  maxWidth: string;
+  centerItems?: boolean;
+}>`
   max-width: ${(props) => props.maxWidth};
 
   display: flex;
   flex-grow: 1;
-  align-items: center;
+  align-items: ${(props) => (props.centerItems ? "center" : "")};
   justify-content: center;
   flex-direction: column;
+  padding-right: 3rem;
+
   @media (max-width: 1024px) {
     width: 100%;
     max-width: 100%;
     padding-top: var(--margins-lg);
     padding-bottom: var(--margins-lg);
+    padding-right: 0;
   }
 `;
 
@@ -76,8 +86,6 @@ const StyledP = styled.p`
 `;
 
 const BorderIconContainer = styled.div`
-  /* padding: 30px; */
-
   @media (max-width: 1024px) {
     display: none;
   }
@@ -100,7 +108,7 @@ const FirstSection = () => {
           </StyledP>
           <DownloadLokinet />
         </StyledLeftSection>
-        <StyledRightSection maxWidth="60%">
+        <StyledRightSection maxWidth="60%" centerItems={true}>
           <WireframeSphere />
         </StyledRightSection>
         <BorderIconContainer>
@@ -116,13 +124,16 @@ const StyledH3 = styled.h3`
   font-weight: 600;
   font-size: 16px;
   font-family: "Archivo", Sans-serif;
-  padding: var(--margins-md);
+  padding-top: var(--margins-md);
+  padding-bottom: var(--margins-md);
+  flex-grow: 1;
 `;
 
 const StyledSmallText = styled.div`
   font-weight: 400;
   font-size: 12px;
   font-family: "IBM Plex Mono", Sans-serif;
+  text-align: justify;
 `;
 
 const SecondSection = () => {
@@ -135,7 +146,7 @@ const SecondSection = () => {
         <StyledLeftSection maxWidth="60%" centerItems={true}>
           <HyperGlobe />
         </StyledLeftSection>
-        <StyledRightSection maxWidth="40%">
+        <StyledRightSection maxWidth="40%" centerItems={false}>
           <StyledH3>DECENTRALISED NETWORK</StyledH3>
           <StyledSmallText>
             Lokinet is powered by a decentralised network of staked nodes.
@@ -186,7 +197,7 @@ const ThirdSection = () => {
           </StyledSmallText>
           <TextFaqButton />
         </StyledLeftSection>
-        <StyledRightSection maxWidth="60%">
+        <StyledRightSection maxWidth="60%" centerItems={true}>
           <HoleWireFrame />
         </StyledRightSection>
 

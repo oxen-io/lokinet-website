@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useMemo } from "react";
 import styled from "styled-components";
 import { Shader, Vector3 } from "three";
 
@@ -63,14 +63,16 @@ const SvgPlusTinyIcon = () => (
 function AnimatedHole(
   props: JSX.IntrinsicElements["mesh"] & { color: string }
 ) {
-  const meshRef = useRef<any>(null!);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const time = { value: 0 };
+  const uniforms = useMemo(
+    () => ({
+      time: { value: 0.0 },
+    }),
+    []
+  );
 
   const colorArray = new Float32Array(1);
   useFrame((state, delta) => {
-    time.value = time.value + delta;
+    uniforms.time.value = uniforms.time.value + delta;
     state.camera.lookAt(0, 0.5, 0);
     state.camera.updateProjectionMatrix();
   });
@@ -100,13 +102,13 @@ function AnimatedHole(
           `gl_Position=projectionMatrix*modelViewMatrix*vert(vec4(transformed,1.0));`
         );
 
-      s.uniforms.t = time;
+      s.uniforms.t = uniforms.time;
     },
-    [time]
+    [uniforms.time]
   );
 
   return (
-    <instancedMesh ref={meshRef} count={1}>
+    <instancedMesh count={1}>
       <cylinderBufferGeometry attach="geometry" args={[1, 1, 1, 30, 30, true]}>
         <instancedBufferAttribute
           args={[colorArray, 1]}
@@ -132,7 +134,7 @@ export const HoleWireFrame = () => {
   }
 
   return (
-    <Flex maxWidth="100%">
+    <Flex maxWidth="100%" flexGrow={1} alignSelf="flex-end">
       <FlexTitle>
         <Title>LOKINET</Title>
         <SvgPlusTinyIcon />

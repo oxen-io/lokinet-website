@@ -5,8 +5,6 @@ const StyledPageRoot = styled.div`
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  min-width: 100vw;
-  min-height: 100vh;
 `;
 
 export const PageRoot = (props: { children: React.ReactNode }) => {
