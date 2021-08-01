@@ -37,7 +37,8 @@ const StyledSection = styled.section`
 
 const StyledLeftSection = styled.div<{
   maxWidth: string;
-  centerItems?: boolean;
+  centerItems: boolean;
+  disableLeftPadding: boolean;
 }>`
   max-width: ${(props) => props.maxWidth};
   display: flex;
@@ -45,7 +46,7 @@ const StyledLeftSection = styled.div<{
   margin: var(--margins-lg);
   flex-direction: column;
   align-items: ${(props) => (props.centerItems ? "center" : "")};
-  padding-left: 3rem;
+  padding-left: ${(props) => (props.disableLeftPadding ? "0" : "3rem")};
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -98,7 +99,11 @@ const FirstSection = () => {
         <BorderIconContainer>
           <AnimatedPlusIcon />
         </BorderIconContainer>
-        <StyledLeftSection maxWidth="40%">
+        <StyledLeftSection
+          maxWidth="40%"
+          disableLeftPadding={false}
+          centerItems={false}
+        >
           <StyledTitle>Anonymous Internet Access</StyledTitle>
           <StyledP>
             – Browse privately
@@ -125,7 +130,7 @@ const StyledH3 = styled.h3`
   font-size: 16px;
   font-family: "Archivo", Sans-serif;
   padding-top: var(--margins-md);
-  padding-bottom: var(--margins-md);
+  padding-bottom: var(--margins-xs);
   flex-grow: 1;
 `;
 
@@ -143,10 +148,14 @@ const SecondSection = () => {
         <BorderIconContainer>
           <SvgCircleIcon />
         </BorderIconContainer>
-        <StyledLeftSection maxWidth="60%" centerItems={true}>
+        <StyledLeftSection
+          maxWidth="55%"
+          centerItems={true}
+          disableLeftPadding={true}
+        >
           <HyperGlobe />
         </StyledLeftSection>
-        <StyledRightSection maxWidth="40%" centerItems={false}>
+        <StyledRightSection maxWidth="45%" centerItems={false}>
           <StyledH3>DECENTRALISED NETWORK</StyledH3>
           <StyledSmallText>
             Lokinet is powered by a decentralised network of staked nodes.
@@ -179,7 +188,11 @@ const ThirdSection = () => {
         <BorderIconContainer>
           <SvgMinusLongIcon />
         </BorderIconContainer>
-        <StyledLeftSection maxWidth="40%">
+        <StyledLeftSection
+          maxWidth="40%"
+          disableLeftPadding={false}
+          centerItems={false}
+        >
           <StyledH3>CENSORSHIP-RESISTANT</StyledH3>
           <StyledSmallText>
             With no central authority controlling the network, content hosted
