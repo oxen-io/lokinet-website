@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Icon from "./icons/Icon";
 
@@ -58,7 +58,8 @@ export const SvgMinusLongBoldIcon = () => (
 export const AccordionSection = (props: any) => {
   const { onClick, expandedIndex, index, title, children } = props;
 
-  const isExpanded = expandedIndex === index;
+  const isExpanded = expandedIndex === index || expandedIndex === -1;
+
   return (
     <StyledLi isExpanded={isExpanded}>
       <StyledSectionTitle
@@ -123,6 +124,10 @@ export const Accordion = (props: { children: React.ReactNodeArray }) => {
   const [expandedIndex, setExpandedIndex] = useState<number>(-1);
 
   let index = -1;
+
+  useEffect(() => {
+    setExpandedIndex(0);
+  }, []);
   const childrenWithExpandedIndex = React.Children.map<
     React.ReactNode,
     React.ReactNode
@@ -130,7 +135,7 @@ export const Accordion = (props: { children: React.ReactNodeArray }) => {
     index = index + 1;
     if (React.isValidElement(child)) {
       return React.cloneElement(child, {
-        expandedIndex: expandedIndex,
+        expandedIndex,
         index,
         onClick: setExpandedIndex,
       });
