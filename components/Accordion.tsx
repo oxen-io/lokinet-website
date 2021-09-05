@@ -63,7 +63,7 @@ export const AccordionSection = (props: any) => {
   return (
     <StyledLi isExpanded={isExpanded}>
       <StyledSectionTitle
-        onClick={() => (isExpanded ? onClick(-1) : onClick(index))}
+        onClick={() => (isExpanded ? onClick(-2) : onClick(index))}
       >
         {isExpanded ? <SvgMinusLongBoldIcon /> : <SvgPlusIconBold />}
         {title}
