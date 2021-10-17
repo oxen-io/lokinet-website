@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Vector3 } from "three";
 
 import { ThemeContext } from "../theme/theme";
+import { IsWebGLAvailable, FallbackSphereWireframe } from "../components/NoWebGLCompatibility";
 
 const CanvasContainer = styled.div`
   width: 520px;
@@ -43,6 +44,15 @@ function AnimatedSphere(
 }
 
 export const WireframeSphere = () => {
+
+  if(!IsWebGLAvailable) {
+      return (
+        <WireframeContainer>
+          <FallbackSphereWireframe />
+        </WireframeContainer>
+      );
+  }
+
   const { colorMode } = React.useContext(ThemeContext);
   let color = "black";
 

@@ -6,6 +6,7 @@ import { Shader, Vector3 } from "three";
 import { ThemeContext } from "../theme/theme";
 import { Flex } from "./flex/Flex";
 import Icon from "../components/icons/Icon";
+import { IsWebGLAvailable, FallbackHoleWireframe } from "../components/NoWebGLCompatibility";
 
 const CanvasContainer = styled.div`
   width: 448px;
@@ -126,6 +127,23 @@ function AnimatedHole(
 }
 
 export const HoleWireFrame = () => {
+  if(!IsWebGLAvailable) {
+      return (
+        <Flex maxWidth="100%" flexGrow={1} alignSelf="flex-end">
+          <FlexTitle>
+            <Title>LOKINET</Title>
+            <SvgPlusTinyIcon />
+          </FlexTitle>
+          <WireframeContainer>
+            <CanvasContainer>
+                <FallbackHoleWireframe />
+            </CanvasContainer>
+
+          </WireframeContainer>
+        </Flex>
+      );
+  }
+
   const { colorMode } = React.useContext(ThemeContext);
   let color = "black";
 
