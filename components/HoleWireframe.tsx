@@ -1,14 +1,18 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useCallback, useMemo } from "react";
-import styled from "styled-components";
+import {
+  FallbackHoleWireframe,
+  IsWebGLAvailable,
+} from "./NoWebGLCompatibility";
 import { Shader, Vector3 } from "three";
+import { useCallback, useContext, useMemo } from "react";
 
-import { ThemeContext } from "../theme/theme";
 import { Flex } from "./flex/Flex";
 import Icon from "../components/icons/Icon";
-import { IsWebGLAvailable, FallbackHoleWireframe } from "../components/NoWebGLCompatibility";
+import { ThemeContext } from "../theme/theme";
+import styled from "styled-components";
 
 const CanvasContainer = styled.div`
+  position: relative;
   width: 448px;
   height: 298px;
   max-width: 100%;
@@ -127,29 +131,9 @@ function AnimatedHole(
 }
 
 export const HoleWireFrame = () => {
-  if(!IsWebGLAvailable) {
-      return (
-        <Flex maxWidth="100%" flexGrow={1} alignSelf="flex-end">
-          <FlexTitle>
-            <Title>LOKINET</Title>
-            <SvgPlusTinyIcon />
-          </FlexTitle>
-          <WireframeContainer>
-            <CanvasContainer>
-                <FallbackHoleWireframe />
-            </CanvasContainer>
-
-          </WireframeContainer>
-        </Flex>
-      );
-  }
-
-  const { colorMode } = React.useContext(ThemeContext);
-  let color = "black";
-
-  if (colorMode === "dark") {
-    color = "white";
-  }
+  const hasWebGL = IsWebGLAvailable();
+  const { colorMode } = useContext(ThemeContext);
+  let color = colorMode === "dark" ? "white" : "black";
 
   return (
     <Flex maxWidth="100%" flexGrow={1} alignSelf="flex-end">
@@ -159,15 +143,19 @@ export const HoleWireFrame = () => {
       </FlexTitle>
       <WireframeContainer>
         <CanvasContainer>
-          <Canvas
-            gl={{ antialias: true, autoClear: true, autoClearDepth: true }}
-            camera={{
-              position: new Vector3(3, 3, 3),
-              zoom: 1.5,
-            }}
-          >
-            <AnimatedHole color={color} />
-          </Canvas>
+          {hasWebGL ? (
+            <Canvas
+              gl={{ antialias: true, autoClear: true, autoClearDepth: true }}
+              camera={{
+                position: new Vector3(3, 3, 3),
+                zoom: 1.5,
+              }}
+            >
+              <AnimatedHole color={color} />
+            </Canvas>
+          ) : (
+            <FallbackHoleWireframe />
+          )}
         </CanvasContainer>
       </WireframeContainer>
     </Flex>
