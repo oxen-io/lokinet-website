@@ -1,45 +1,41 @@
-import { Scene } from "three"
-import React from "react";
-
+import Image from "next/image";
 import { ThemeContext } from "../theme/theme";
+import { useContext } from "react";
 
-function TestWebGL(): boolean {
-
-	try {
-		const canvas = document.createElement( 'canvas' );
-		return !! ( window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ) );
-	} catch ( e ) {
-		return false;
-	}
-
-}
-
-export var IsWebGLAvailable = TestWebGL()
-
-export var FallbackHoleWireframe = () => {
-
-    const { colorMode } = React.useContext(ThemeContext);
-    let gif = "fallback-animations/hole-wireframe-white.gif";
-    if (colorMode === "dark") {
-      gif = "fallback-animations/hole-wireframe-dark.gif";
-    }
-
-    return(
-        <img src={gif} />
+export function IsWebGLAvailable(): boolean {
+  try {
+    const canvas = document.createElement("canvas");
+    return Boolean(
+      window.WebGLRenderingContext &&
+        (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
     );
-
+  } catch (e) {
+    return false;
+  }
 }
+
+export const FallbackHoleWireframe = () => {
+  const { colorMode } = useContext(ThemeContext);
+
+  return (
+    <Image
+      src={`/img/hole-wireframe-${colorMode === "dark" ? "dark" : "white"}.gif`}
+      alt="hole wireframe"
+      layout="fill"
+    />
+  );
+};
 
 export var FallbackSphereWireframe = () => {
+  const { colorMode } = useContext(ThemeContext);
 
-    const { colorMode } = React.useContext(ThemeContext);
-    let gif = "fallback-animations/sphere-wireframe-white.gif";
-    if (colorMode === "dark") {
-      gif = "fallback-animations/sphere-wireframe-dark.gif";
-    }
-
-    return(
-        <img src={gif} />
-    );
-
-}
+  return (
+    <Image
+      src={`/img/sphere-wireframe-${
+        colorMode === "dark" ? "dark" : "white"
+      }.gif`}
+      alt="sphere wireframe"
+      layout="fill"
+    />
+  );
+};

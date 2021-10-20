@@ -1,12 +1,16 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useRef } from "react";
-import styled from "styled-components";
-import { Vector3 } from "three";
+import {
+  FallbackSphereWireframe,
+  IsWebGLAvailable,
+} from "./NoWebGLCompatibility";
+import { useContext, useRef } from "react";
 
 import { ThemeContext } from "../theme/theme";
-import { IsWebGLAvailable, FallbackSphereWireframe } from "../components/NoWebGLCompatibility";
+import { Vector3 } from "three";
+import styled from "styled-components";
 
 const CanvasContainer = styled.div`
+  position: relative;
   width: 520px;
   height: 520px;
   max-width: 100%;
@@ -44,31 +48,23 @@ function AnimatedSphere(
 }
 
 export const WireframeSphere = () => {
-
-  if(!IsWebGLAvailable) {
-      return (
-        <WireframeContainer>
-          <FallbackSphereWireframe />
-        </WireframeContainer>
-      );
-  }
-
-  const { colorMode } = React.useContext(ThemeContext);
-  let color = "black";
-
-  if (colorMode === "dark") {
-    color = "white";
-  }
+  const hasWebGL = IsWebGLAvailable();
+  const { colorMode } = useContext(ThemeContext);
+  let color = colorMode === "dark" ? "white" : "black";
 
   return (
     <WireframeContainer>
       <CanvasContainer>
-        <Canvas
-          gl={{ antialias: true, autoClear: true, autoClearDepth: true }}
-          camera={{ position: new Vector3(0, 0, 1700), far: 3000, zoom: 2 }}
-        >
-          <AnimatedSphere color={color} />
-        </Canvas>
+        {hasWebGL ? (
+          <Canvas
+            gl={{ antialias: true, autoClear: true, autoClearDepth: true }}
+            camera={{ position: new Vector3(0, 0, 1700), far: 3000, zoom: 2 }}
+          >
+            <AnimatedSphere color={color} />
+          </Canvas>
+        ) : (
+          <FallbackSphereWireframe />
+        )}
       </CanvasContainer>
     </WireframeContainer>
   );
