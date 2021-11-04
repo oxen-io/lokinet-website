@@ -12,7 +12,7 @@ import { Separator } from "../components/Separator";
 
 import { TextFaqButton } from "../components/buttons/TextButton";
 import { DownloadLokinet } from "../components/DownloadLokinet";
-import { HoleWireFrame } from "../components/HoleWireframe";
+import { WireframeHole } from "../components/WireframeHole";
 
 const StyledTitle = styled.h1`
   font-family: "Inter", Sans-serif;
@@ -211,7 +211,7 @@ const ThirdSection = () => {
           <TextFaqButton />
         </StyledLeftSection>
         <StyledRightSection maxWidth="60%" centerItems={true}>
-          <HoleWireFrame />
+          <WireframeHole />
         </StyledRightSection>
 
         <BorderIconContainer>

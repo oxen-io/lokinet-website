@@ -1,8 +1,8 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
-  FallbackSphereWireframe,
+  FallbackWireframeSphere,
   IsWebGLAvailable,
-} from "./NoWebGLCompatibility";
+} from "./WireframeFallbacks";
 import { useContext, useRef } from "react";
 
 import { ThemeContext } from "../theme/theme";
@@ -63,7 +63,7 @@ export const WireframeSphere = () => {
             <AnimatedSphere color={color} />
           </Canvas>
         ) : (
-          <FallbackSphereWireframe />
+          <FallbackWireframeSphere />
         )}
       </CanvasContainer>
     </WireframeContainer>
