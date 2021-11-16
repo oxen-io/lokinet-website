@@ -20,7 +20,7 @@ export const FallbackWireframeHole = () => {
   return (
     <Image
 		src={`/img/hole-wireframe-${
-        colorMode === "dark" ? "dark" : "white"
+        colorMode === "dark" ? "dark" : "light"
       }.jpg`}
       alt="hole wireframe"
       layout="fill"
@@ -28,13 +28,13 @@ export const FallbackWireframeHole = () => {
   );
 };
 
-export var FallbackWireframeSphere = () => {
+export const FallbackWireframeSphere = () => {
   const { colorMode } = useContext(ThemeContext);
 
   return (
     <Image
       src={`/img/sphere-wireframe-${
-        colorMode === "dark" ? "dark" : "white"
+        colorMode === "dark" ? "dark" : "light"
       }.jpg`}
       alt="sphere wireframe"
       layout="fill"
