@@ -1,4 +1,5 @@
 import { NextApiResponse } from "next"
+import { GetDownloadURL } from "../components/DownloadLokinet"
 
 
 function Page() {
@@ -7,35 +8,45 @@ function Page() {
 
 export async function getServerSideProps({ res }: {res: NextApiResponse}) {
 
-  const fetched = await fetch('https://api.github.com/repos/oxen-io/lokinet/releases/latest');
-  if (!fetched) {
-    return {
-      notFound: true,
-    }
+  var downloadURL = await GetDownloadURL("latest", ".tar.xz");
+
+  if(downloadURL == "error") {
+      return {
+        notFound: true,
+      };
   }
-  const json = await fetched.json()
-  if (!json || !json.assets) {
-    return {
-      notFound: true,
-    }
-  }
-  const assetsUrl =  json.assets.map((m:any) => m.browser_download_url)
-  if (!assetsUrl || !assetsUrl.length) {
-    return {
-      notFound: true,
-    }
-  }
-  const linuxAssetUrl = assetsUrl.find((a:string) => a.endsWith('.tar.xz'))
-  if (!linuxAssetUrl) {
-    return {
-      notFound: true,
-    }
+
+  if(downloadURL == "missing_filetype"){
+
+      const fetched = await fetch("https://api.github.com/repos/oxen-io/lokinet/releases");
+
+      if (!fetched) {
+        return {
+          notFound: true,
+        };
+      }
+      const json = await fetched.json();
+      if (!json) {
+        return {
+          notFound: true,
+        };
+      }
+
+      for (let i = 1; i < json.length; i++) {
+
+          downloadURL = await GetDownloadURL(json[i].id.toString(), ".tar.xz");
+          if(downloadURL != "error" && downloadURL != "missing_filetype") {
+              break;
+          }
+
+      }
+
   }
 
   return {
     redirect: {
       permanent: false,
-      destination:linuxAssetUrl,
+      destination: downloadURL,
     },
     props:{},
   };

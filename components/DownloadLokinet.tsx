@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { TextDownloadLokinetButton } from "./buttons/TextButton";
 
-const windowsDownloadUrl = "https://lokinet.org/windows";
-const linuxDownloadUrl = "https://lokinet.org/linux";
+const windowsDownloadUrl = "/windows";
+const linuxDownloadUrl = "/linux";
 
 const Container = styled.section`
   width: fit-content;
@@ -105,3 +105,26 @@ export const DownloadLokinet = () => {
     </Container>
   );
 };
+
+export async function GetDownloadURL(tag, filetype: string) : string {
+
+    const fetched = await fetch('https://api.github.com/repos/oxen-io/lokinet/releases/' + tag);
+    if (!fetched) {
+      return "error";
+    }
+    const json = await fetched.json()
+    if (!json || !json.assets) {
+      return "error";
+    }
+    const assetsUrl =  json.assets.map((m:any) => m.browser_download_url)
+    if (!assetsUrl || !assetsUrl.length) {
+      return "error";
+    }
+    const assetURL = assetsUrl.find((a:string) => a.endsWith(filetype))
+    if (!assetURL) {
+      return "missing_filetype";
+    }
+
+    return assetURL;
+
+}
