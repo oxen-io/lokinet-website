@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-async function getAssetURL(tag: string, fileType: string): Promise<string> {
+async function getAssetUrl(tag: string, fileType: string): Promise<string> {
   try {
     const fetched = await fetch(
       `https://api.github.com/repos/oxen-io/lokinet/releases/${tag}`
@@ -37,7 +37,7 @@ async function getFallbackUrl(fileType: string): Promise<string> {
 
     for (let i = 1; i < data.length; i++) {
       try {
-        assetURL = await getAssetURL(data[i].id.toString(), fileType);
+        assetURL = await getAssetUrl(data[i].id.toString(), fileType);
         break;
       } catch (err) {
         continue;
@@ -56,7 +56,7 @@ async function getFallbackUrl(fileType: string): Promise<string> {
 }
 
 async function getDownloadUrl(tag: string, fileType: string): Promise<string> {
-  let url = await getAssetURL(tag, fileType);
+  let url = await getAssetUrl(tag, fileType);
   if (url === "error") {
     console.log(
       `Download API: ${tag} has no matching ${fileType.substring(
