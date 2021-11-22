@@ -61,6 +61,18 @@ const config = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/linux",
+        destination: "/api/download/linux",
+      },
+      {
+        source: "/windows",
+        destination: "/api/download/windows",
+      },
+    ];
+  },
   reactStrictMode: true,
 };
 
