@@ -1,6 +1,9 @@
-import React from "react";
-import Header from "../header/Header";
+import React, { ReactNode } from "react";
+
+import CustomHead from "../CustomHead";
 import Footer from "../footer/Footer";
+import Header from "../header/Header";
+import { IMetadata } from "../../constants/metadata";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
@@ -23,11 +26,19 @@ const StyledMain = styled.div`
   width: 100%;
 `;
 
-export default function Layout(props: { children: React.ReactNode }) {
+interface Props {
+  title?: string;
+  metadata?: IMetadata;
+  children: ReactNode;
+}
+
+export default function Layout(props: Props) {
+  const { title, metadata, children } = props;
   return (
     <StyledContainer>
+      <CustomHead title={title} metadata={metadata} />
       <Header />
-      <StyledMain>{props.children}</StyledMain>
+      <StyledMain>{children}</StyledMain>
       <Footer />
     </StyledContainer>
   );

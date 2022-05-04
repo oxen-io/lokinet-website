@@ -1,21 +1,16 @@
-import Head from "next/head";
-import React from "react";
 import { Accordion, AccordionSection } from "../components/Accordion";
+
 import { ExternalLink } from "../components/ExternalLink";
 import { Flex } from "../components/flex/Flex";
 import Layout from "../components/layout/Layout";
+import METADATA from "../constants/metadata";
 import { PageRoot } from "../components/layout/PageRoot";
+import React from "react";
 
 export default function Faq() {
   return (
     <PageRoot>
-      <Head>
-        <title>FAQ - Lokinet</title>
-        <meta name="description" content="FAQ - Lokinet" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Layout>
+      <Layout title={"FAQ"} metadata={METADATA["FAQ_PAGE"]}>
         <Flex
           container={true}
           width="100%"

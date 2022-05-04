@@ -1,18 +1,16 @@
-import Head from "next/head";
-import React from "react";
-import styled from "styled-components";
-import { WireframeSphere } from "../components/WireframeSphere";
-import { HyperGlobe } from "../components/Hyperglobe";
 import { AnimatedPlusIcon } from "../components/icons/AnimatedSvgPlusIcon";
-import { SvgCircleIcon } from "../components/icons/SvgCircleIcon";
-import { SvgMinusLongIcon } from "../components/icons/SvgMinusIcon";
+import { DownloadLokinet } from "../components/DownloadLokinet";
+import { HyperGlobe } from "../components/Hyperglobe";
 import Layout from "../components/layout/Layout";
 import { PageRoot } from "../components/layout/PageRoot";
+import React from "react";
 import { Separator } from "../components/Separator";
-
+import { SvgCircleIcon } from "../components/icons/SvgCircleIcon";
+import { SvgMinusLongIcon } from "../components/icons/SvgMinusIcon";
 import { TextFaqButton } from "../components/buttons/TextButton";
-import { DownloadLokinet } from "../components/DownloadLokinet";
 import { WireframeHole } from "../components/WireframeHole";
+import { WireframeSphere } from "../components/WireframeSphere";
+import styled from "styled-components";
 
 const StyledTitle = styled.h1`
   font-family: "Inter", Sans-serif;
@@ -225,14 +223,6 @@ const ThirdSection = () => {
 export default function Home() {
   return (
     <PageRoot>
-      <Head>
-        <title>Anonymous internet access - Lokinet</title>
-        <meta
-          name="description"
-          content="Anonymous internet access - Lokinet"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Layout>
         <FirstSection />
         <SecondSection />
