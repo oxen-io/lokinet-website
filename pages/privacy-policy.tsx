@@ -1,10 +1,9 @@
-import Head from "next/head";
-import React from "react";
-import styled from "styled-components";
 import { ExternalLink } from "../components/ExternalLink";
 import Layout from "../components/layout/Layout";
-
+import METADATA from "../constants/metadata";
 import { PageRoot } from "../components/layout/PageRoot";
+import React from "react";
+import styled from "styled-components";
 
 const StyledStrong = styled.strong`
   font-size: 25px;
@@ -18,13 +17,7 @@ const StyledStrong = styled.strong`
 export default function PrivacyPolicy() {
   return (
     <PageRoot>
-      <Head>
-        <title>Privacy Policy - Lokinet</title>
-        <meta name="description" content="Privacy Policy - Lokinet" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Layout>
+      <Layout title={"Privacy Policy"} metadata={METADATA["PRIVACY_PAGE"]}>
         <h2>Lokinet Privacy Policy</h2>
         <h3>Lokinet never knows who you are or what websites you visit.</h3>
         <h3>

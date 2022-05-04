@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 import { ServerStyleSheet } from "styled-components";
 
@@ -112,7 +112,7 @@ export default class MyDocument extends Document {
     };
 
     return (
-      <Html>
+      <Html prefix="og: http://ogp.me/ns#" lang="en">
         <Head />
         <body>
           <Main />
