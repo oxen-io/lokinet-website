@@ -121,7 +121,8 @@ export const DownloadLokinet = () => {
       />
 
       <DownloadIconsContainer isVisible={isExpanded}>
-        <WindowsDownloadButton />
+        {/* Removed until v0.9.10 is released */}
+        {/* <WindowsDownloadButton /> */}
         <LinuxDownloadButton />
         <GitHubButton />
       </DownloadIconsContainer>
