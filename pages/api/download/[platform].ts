@@ -1,12 +1,25 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import {
+  Cache,
+  readCacheFile,
+  updateDownloadsCache,
+} from "../../../utils/cache";
 
-async function getAssetUrl(tag: string, fileType: string): Promise<string> {
+const updateRate = 60 * 60 * 1000; // hourly
+
+function isDownloadFresh(cache: Cache, fileType: string): boolean {
+  const now = Date.now();
+
+  return Boolean(
+    cache &&
+      cache.downloads &&
+      cache.downloads[fileType] &&
+      now - cache.downloads[fileType].timestamp < updateRate
+  );
+}
+
+async function getAssetUrl(data: any, fileType: string): Promise<string> {
   try {
-    const fetched = await fetch(
-      `https://api.github.com/repos/oxen-io/lokinet/releases/${tag}`
-    );
-
-    const data = await fetched.json();
     if (!data) throw new Error("No data found");
     if (!data.assets || data.assets.length === 0)
       throw new Error("No assets found");
@@ -26,25 +39,23 @@ async function getAssetUrl(tag: string, fileType: string): Promise<string> {
 
 async function getFallbackUrl(fileType: string): Promise<string> {
   try {
-    let assetURL = "";
-
     const fetched = await fetch(
       "https://api.github.com/repos/oxen-io/lokinet/releases"
     );
-
     const data = await fetched.json();
     if (!data) throw new Error("No data found");
 
-    for (let i = 1; i < data.length; i++) {
-      try {
-        assetURL = await getAssetUrl(data[i].id.toString(), fileType);
+    let assetURL = "";
+
+    for (let i = 1; i < Object.keys(data).length; i++) {
+      assetURL = await getAssetUrl(data[i], fileType);
+      if (assetURL !== "error") {
         break;
-      } catch (err) {
-        continue;
       }
+      continue;
     }
 
-    if (assetURL === "") {
+    if (assetURL === "error") {
       throw new Error("No fallback asset found");
     }
 
@@ -56,7 +67,12 @@ async function getFallbackUrl(fileType: string): Promise<string> {
 }
 
 async function getDownloadUrl(tag: string, fileType: string): Promise<string> {
-  let url = await getAssetUrl(tag, fileType);
+  const fetched = await fetch(
+    `https://api.github.com/repos/oxen-io/lokinet/releases/${tag}`
+  );
+  const data = await fetched.json();
+  let url = await getAssetUrl(data, fileType);
+
   if (url === "error") {
     console.log(
       `Download API: ${tag} has no matching ${fileType.substring(
@@ -64,6 +80,7 @@ async function getDownloadUrl(tag: string, fileType: string): Promise<string> {
       )} fetching fallback url`
     );
     url = await getFallbackUrl(fileType);
+
     if (url === "error") {
       throw new Error("No url found");
     }
@@ -77,9 +94,16 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const fileType = req.query.platform === "linux" ? ".tar.xz" : ".exe";
+  const cache = readCacheFile();
 
   try {
-    let downloadURL = await getDownloadUrl("latest", fileType);
+    let downloadURL;
+    if (cache && isDownloadFresh(cache, fileType)) {
+      downloadURL = cache.downloads![fileType].url;
+    } else {
+      downloadURL = await getDownloadUrl("latest", fileType);
+      updateDownloadsCache(fileType, downloadURL, Date.now());
+    }
     return res.redirect(downloadURL);
   } catch (err) {
     res.status(500).json({ message: `Download API getDownloadUrl() ${err}` });
