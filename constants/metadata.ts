@@ -50,11 +50,15 @@ const METADATA = {
   FAQ_PAGE: {
     TYPE: "FAQPage",
     DESCRIPTION:
-      "Lokinet’s FAQ | Find answers to some of the most frequently asked questions about Lokinet — info on the team, the tech, and the technicalities.",
+      "Lokinet FAQ’s | Find answers to some of the most frequently asked questions about Lokinet — info on the team, the tech, and the technicalities.",
   },
   PRIVACY_PAGE: {
     DESCRIPTION:
-      "Lokinet’s Privacy Policy | Lokinet never knows who you are or what websites you visit.",
+      "Lokinet Privacy Policy | Lokinet never knows who you are or what websites you visit.",
+  },
+  TERMS_OF_SERVICE: {
+    DESCRIPTION:
+      "Lokinet Terms of Service | Lokinet never knows who you are or what websites you visit.",
   },
 };
 

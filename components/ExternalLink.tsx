@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledLink = styled.a`
+export const StyledLink = styled.a`
   border-bottom: solid 1px var(--color-text);
   transition: all var(--duration-linkBottom) linear;
 

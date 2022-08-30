@@ -3,10 +3,12 @@ import Logo from "../logo/Logo";
 import TelegramButton from "../buttons/image-button/social-buttons/TelegramButton";
 import React from "react";
 import TwitterButton from "../buttons/image-button/social-buttons/TwitterButton";
-import Spacer from "../spacer/Spacer";
 import styled from "styled-components";
 import { Flex } from "../flex/Flex";
-import { PrivacyLinkButton } from "../buttons/InternalLinkButton";
+import {
+  PrivacyLinkButton,
+  TermsOfServiceLinkButton,
+} from "../buttons/InternalLinkButton";
 import { Separator } from "../Separator";
 
 const StyledFooter = styled.footer`
@@ -22,19 +24,20 @@ const StyledFooter = styled.footer`
 const StyledBottomFooter = styled.div`
   display: flex;
   flex-grow: 1;
-  width: calc(100% - 2 * var(--margins-xxl));
-  margin-left: var(--margins-xxl);
-  margin-right: var(--margins-xxl);
+  width: 100%;
   margin-bottom: var(--margins-lg);
   margin-top: var(--margins-lg);
   flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
 
   @media (max-width: 1024px) {
     justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
   }
 `;
 
@@ -57,6 +60,7 @@ export default function Footer() {
         <StyledBottomFooter>
           <Logo />
           <PrivacyAndButtonsFlex>
+            <TermsOfServiceLinkButton />
             <PrivacyLinkButton />
             <ButtonContainer>
               <TwitterButton />

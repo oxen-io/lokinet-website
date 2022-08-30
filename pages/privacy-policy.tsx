@@ -3,26 +3,20 @@ import Layout from "../components/layout/Layout";
 import METADATA from "../constants/metadata";
 import { PageRoot } from "../components/layout/PageRoot";
 import React from "react";
-import styled from "styled-components";
-
-const StyledStrong = styled.strong`
-  font-size: 25px;
-  line-height: 1.1em;
-  font-weight: 700;
-  margin: 0px;
-  line-height: 35px;
-  color: var(--color-secondary);
-`;
 
 export default function PrivacyPolicy() {
   return (
     <PageRoot>
       <Layout title={"Privacy Policy"} metadata={METADATA["PRIVACY_PAGE"]}>
-        <h2>Lokinet Privacy Policy</h2>
-        <h3>Lokinet never knows who you are or what websites you visit.</h3>
+        <h1>Lokinet Privacy Policy</h1>
+        <p>
+          <i>Last Updated: 30 August 2022</i>
+        </p>
         <h3>
-          <StyledStrong>Lokinet App</StyledStrong>
+          TDLR; Lokinet never knows who you are or what websites you visit.
         </h3>
+        <br />
+        <h2>1. Lokinet App</h2>
 
         <p>We are mission-driven to protect your privacy.</p>
         <p>
@@ -43,11 +37,7 @@ export default function PrivacyPolicy() {
           information, it is important that you refer to the privacy policy of
           the service you are accessing.{" "}
         </p>
-        <h3>
-          <StyledStrong>
-            Using Lokinet on a MacOS or Windows device
-          </StyledStrong>
-        </h3>
+        <h2>2.Using Lokinet on a MacOS or Windows device</h2>
         <p>
           If you use Lokinet on your macOS or Windows computer, Apple or
           Microsoft might store information about how you use the app.
@@ -68,9 +58,7 @@ export default function PrivacyPolicy() {
           operating systems and applies to any software you use. Lokinet itself
           never records stores, or shares any of this information.
         </p>
-        <h3>
-          <StyledStrong>Website Privacy Policy</StyledStrong>
-        </h3>
+        <h2>3. Website Privacy Policy</h2>
         <p>
           The Lokinet website never attempts to link your usage of the website
           to your real identity or create a user profile based on your activity.
@@ -90,17 +78,22 @@ export default function PrivacyPolicy() {
           We do not and cannot share any information related to you or your
           access of the Lokinet website.
         </p>
-        <h3>Updates</h3>
+        <h2>4. Updates</h2>
         <p>
           We will update this privacy policy as needed so that it is current and
           accurate. Your continued use of Lokinet confirms your acceptance of
           our updated Privacy Policy.
         </p>
-        <h3>Get in touch! </h3>
+        <h2>5. Get in touch! </h2>
         <p>
           If you would like more information about Lokinet’s Privacy Policy, or
           have suggestions about how we can better protect your privacy, or just
-          want to say hello — please send us an email at team@oxen.io
+          want to say hello — please send us an email at{" "}
+          <ExternalLink
+            url="mailto:support@lokinet.org"
+            text="support@lokinet.org"
+          />
+          .
         </p>
       </Layout>
     </PageRoot>
