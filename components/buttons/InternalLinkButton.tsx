@@ -16,9 +16,11 @@ const StyledInternalLinkButton = styled.a`
 const StyledPrivacyLink = styled(StyledInternalLinkButton)`
   height: fit-content;
   align-self: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
 
   @media (max-width: 1024px) {
-    margin-right: 0;
+    margin-right: 16px;
   }
 `;
 const StyledFaqLink = styled(StyledInternalLinkButton)`
@@ -27,6 +29,14 @@ const StyledFaqLink = styled(StyledInternalLinkButton)`
   padding: var(--margins-md);
   border-bottom: solid 3px var(--color-text);
 `;
+
+export const TermsOfServiceLinkButton = () => {
+  return (
+    <Link href="/terms-of-service" passHref={true}>
+      <StyledPrivacyLink>Terms of Service</StyledPrivacyLink>
+    </Link>
+  );
+};
 
 export const PrivacyLinkButton = () => {
   return (
