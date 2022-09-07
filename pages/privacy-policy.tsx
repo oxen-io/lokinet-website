@@ -89,10 +89,7 @@ export default function PrivacyPolicy() {
           If you would like more information about Lokinet’s Privacy Policy, or
           have suggestions about how we can better protect your privacy, or just
           want to say hello — please send us an email at{" "}
-          <ExternalLink
-            url="mailto:support@lokinet.org"
-            text="support@lokinet.org"
-          />
+          <ExternalLink url="mailto:team@lokinet.org" text="team@lokinet.org" />
           .
         </p>
       </Layout>

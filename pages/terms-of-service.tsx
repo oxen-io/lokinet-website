@@ -174,10 +174,7 @@ export default function TermsOfService() {
           patents, and other intellectual property rights unless you have our
           written permission. To report copyright, trademark, or other
           intellectual property infringement, please contact{" "}
-          <ExternalLink
-            url="mailto:support@lokinet.org"
-            text="support@lokinet.org"
-          />
+          <ExternalLink url="mailto:team@lokinet.org" text="team@lokinet.org" />
           .
         </p>
         <h3>5.2. Lokinet Content Policy</h3>
@@ -368,10 +365,7 @@ export default function TermsOfService() {
           country where such distribution or use would violate local law or
           would subject us to any regulations in another country. If you have
           specific questions about these Terms, please contact us at{" "}
-          <ExternalLink
-            url="mailto:support@lokinet.org"
-            text="support@lokinet.org"
-          />
+          <ExternalLink url="mailto:team@lokinet.org" text="team@lokinet.org" />
           .
         </p>
       </Layout>
