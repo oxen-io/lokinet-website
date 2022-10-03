@@ -1,0 +1,4360 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2021-11-13T00:22:01.011Z",
+        "updatedAt": "2021-11-13T00:22:03.334Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-11-13T00:22:03.334Z",
+        "firstPublishedAt": "2021-11-13T00:22:03.334Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Author",
+      "description": "Author of a post",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortBio",
+          "name": "Short Bio",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "email",
+          "name": "Email",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "avatar",
+          "name": "Profile Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "position",
+          "name": "Position",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "facebook",
+          "name": "Facebook",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "twiiter",
+          "name": "Twiiter",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "github",
+          "name": "Github",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2021-11-13T00:22:01.015Z",
+        "updatedAt": "2021-11-13T00:22:02.840Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-11-13T00:22:02.840Z",
+        "firstPublishedAt": "2021-11-13T00:22:02.840Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Page",
+      "description": "For general pages with a lot of text content (terms of service, privacy policy)",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "headline",
+          "name": "Headline",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-asset-block",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-block",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, asset, link to Url, link to entry, link to asset, block entry, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {}
+            },
+            {
+              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "preview",
+          "name": "Preview 👀",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "post",
+        "type": "ContentType",
+        "createdAt": "2021-11-13T00:22:01.040Z",
+        "updatedAt": "2021-11-13T00:22:04.893Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-11-13T00:22:04.893Z",
+        "firstPublishedAt": "2021-11-13T00:22:04.893Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Post",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 80,
+                "max": 1300
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featureImage",
+          "name": "Feature Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "assetImageDimensions": {
+                "width": {
+                  "min": 500,
+                  "max": null
+                },
+                "height": {
+                  "min": 500,
+                  "max": null
+                }
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "fullHeader",
+          "name": "Full Header",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": ["author"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "date",
+          "name": "Published Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {}
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "preview",
+          "name": "Preview 👀",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "embeddedLink",
+        "type": "ContentType",
+        "createdAt": "2021-11-13T00:22:01.052Z",
+        "updatedAt": "2021-11-13T00:22:04.364Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-11-13T00:22:04.364Z",
+        "firstPublishedAt": "2021-11-13T00:22:04.364Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Link Preview",
+      "description": "Embed a link which will then show a preview. i.e. Quoting a social media post like a tweet in a blog post. This relies on https://www.noembed.com/",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "url",
+          "name": "Url",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "caption",
+          "name": "Caption",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "position",
+          "name": "Position",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": ["left", "right"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "embeddedMedia",
+        "type": "ContentType",
+        "createdAt": "2021-11-13T00:22:01.060Z",
+        "updatedAt": "2021-11-13T00:22:03.871Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-11-13T00:22:03.871Z",
+        "firstPublishedAt": "2021-11-13T00:22:03.871Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Media",
+      "description": "Embed media into the site. For example inline images on a blog post. Currently supports images only.",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "file",
+          "name": "File",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "sourceUrl",
+          "name": "Source URL",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "caption",
+          "name": "Caption",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "width",
+          "name": "Width",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "height",
+          "name": "Height",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "position",
+          "name": "Position",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": ["left", "right"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "faq_item",
+        "type": "ContentType",
+        "createdAt": "2021-11-13T00:22:01.085Z",
+        "updatedAt": "2021-11-13T00:22:02.329Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-11-13T00:22:02.329Z",
+        "firstPublishedAt": "2021-11-13T00:22:02.329Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "displayField": "question",
+      "name": "FAQ",
+      "description": "Frequently asked questions (Question + Answer)",
+      "fields": [
+        {
+          "id": "id",
+          "name": "ID",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "question",
+          "name": "Question",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "answer",
+          "name": "Answer",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {}
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "tag",
+          "name": "tag",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "intro",
+                "security",
+                "privacy",
+                "contacts",
+                "messaging",
+                "groups",
+                "onion routing",
+                "contact/support",
+                "team",
+                "australia"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "markup",
+        "type": "ContentType",
+        "createdAt": "2021-11-13T00:22:01.326Z",
+        "updatedAt": "2021-11-13T00:22:05.418Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2021-11-13T00:22:05.418Z",
+        "firstPublishedAt": "2021-11-13T00:22:05.418Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Markup",
+      "description": "For content that needs markup that is not supported by the Contentful Rich Text Editor. Currently supports strikethough and text color (Future support ideas: superscript, subscript, background color)",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "color",
+          "name": "Text Color",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "strikethrough",
+          "name": "Strikethrough (Linethrough)",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subscript",
+          "name": "Subscript",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "superscript",
+          "name": "Superscript",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "privacy",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:05.912Z",
+        "updatedAt": "2021-11-13T00:22:05.912Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Privacy"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "announcement",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:05.913Z",
+        "updatedAt": "2021-11-13T00:22:05.913Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Announcement"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "journalism",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:05.916Z",
+        "updatedAt": "2021-11-13T00:22:05.916Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Journalism"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "whistleblowing",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:05.916Z",
+        "updatedAt": "2021-11-13T00:22:05.916Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Whistleblowing"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "security",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:05.929Z",
+        "updatedAt": "2021-11-13T00:22:05.929Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Security"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "privateMessaging",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:06.277Z",
+        "updatedAt": "2021-11-13T00:22:06.277Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Private messaging"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "releaseRoundup",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:06.283Z",
+        "updatedAt": "2021-11-13T00:22:06.283Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Release Roundup"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "communityContribution",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:07.283Z",
+        "updatedAt": "2021-11-13T00:22:07.283Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Community Contribution"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "devDiary",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:07.290Z",
+        "updatedAt": "2021-11-13T00:22:07.290Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Dev Diary"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "technical",
+        "type": "Tag",
+        "createdAt": "2021-11-13T00:22:07.290Z",
+        "updatedAt": "2021-11-13T00:22:07.290Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Technical"
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "efwlt0x77ew3",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-11-13T00:22:03.487Z",
+        "createdBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-11-13T00:22:08.783Z",
+        "updatedBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "author",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortBio",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "email",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "avatar",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "position",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facebook",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "twiiter",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "github",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "efwlt0x77ew3",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-11-13T00:22:02.961Z",
+        "createdBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-11-13T00:22:10.030Z",
+        "updatedBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "What is this page for? This will appear in browser tab and is used for SEO purposes. i.e. Terms of Service"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "helpText": "The url for the webpage and it's unique id e.g. getsession.org/{slug} BE CAREFUL NOT TO OVERRIDE AN EXISTING URL"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "headline",
+          "settings": {
+            "helpText": "Show a small Headline at the top of the page. Will be hidden if left blank. i.e. Session Legal on the Terms of Service and Privacy Policy pages"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "preview",
+          "settings": {
+            "helpText": "Make a page (even if it's a draft or not live 🚀 ) available on getsession.org/preview. Set to \"No\" when no longer needed.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "efwlt0x77ew3",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-11-13T00:22:05.062Z",
+        "createdBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-11-13T00:22:10.105Z",
+        "updatedBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subtitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "settings": {
+            "helpText": "Article description; shown under title in article previews."
+          },
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featureImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "fullHeader",
+          "settings": {
+            "helpText": "Should the Feature Image use the full width of the screen?",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "author",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "preview",
+          "settings": {
+            "helpText": "Make a post (even if it's a draft or not live 🚀 ) available on getsession.org/preview. Set to \"No\" when no longer needed.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "efwlt0x77ew3",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-11-13T00:22:04.455Z",
+        "createdBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-11-13T00:22:08.775Z",
+        "updatedBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "embeddedLink",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "A clear description of the link"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "url",
+          "settings": {
+            "helpText": "The URL for the link you want to embed."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "caption",
+          "settings": {
+            "helpText": "Gives context to the embedded content. Used for accessbility purposes."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "position",
+          "settings": {
+            "helpText": "Where do you want the link preview positioned relative to the text? Only use this for an inline link preview. Leave blank if you want it centered."
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "efwlt0x77ew3",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-11-13T00:22:04.016Z",
+        "createdBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-11-13T00:22:08.778Z",
+        "updatedBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "embeddedMedia",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Title of the media used. Will be used for accessbility purposes (i.e img alt tag)"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "file",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sourceUrl",
+          "settings": {
+            "helpText": "The original URL of the media being used."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "caption",
+          "settings": {
+            "helpText": "Describe the media being used. Used for accessbility purposes. i.e. Image Source: Name by Author on Website"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "width",
+          "settings": {
+            "helpText": "Width of the media in pixels. i.e. 300px Leave empty if you want it to scale up beyond it's original dimensions on larger screens."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "height",
+          "settings": {
+            "helpText": "Height of the media in pixels. i.e. 300px Leave empty if you want it to scale up beyond it's original dimensions on larger screens."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "position",
+          "settings": {
+            "helpText": "Where do you want the media positioned relative to the text? Only use this for an inline embedded entry. Leave blank if you want it as a centered block."
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "efwlt0x77ew3",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-11-13T00:22:02.473Z",
+        "createdBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-11-13T00:22:09.977Z",
+        "updatedBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "faq_item",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "id",
+          "settings": {
+            "helpText": "Used for ordering FAQ items."
+          },
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "question",
+          "settings": {
+            "helpText": "Question being asked. I.e. What is Session?"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "answer",
+          "settings": {
+            "helpText": "The Answer to the above question. I.e Session is a ....."
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "tag",
+          "settings": {
+            "helpText": "Which section does this FAQ fall under?"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "helpText": "Used for linking to that question on the site. Use dashes between words. i.e. security-audit = https://getsession.org/faq#security-audit"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "efwlt0x77ew3",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2021-11-13T00:22:05.524Z",
+        "createdBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-11-13T00:22:08.784Z",
+        "updatedBy": {
+          "sys": {
+            "id": "47EBE5w4mmAv95UMicpR16",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "markup",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "settings": {
+            "helpText": "Give this markup object a name. Use 'content' - 'markup' format. i.e. ahab-strikethrough, telegram-color-blue"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "settings": {
+            "helpText": "The text that needs to be marked up."
+          },
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "color",
+          "settings": {
+            "helpText": "Can be left blank. Supports all valid CSS colors https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "strikethrough",
+          "settings": {
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subscript",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "superscript",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "1qCBzcA0tId5PJuHwAqUlh",
+        "type": "Entry",
+        "createdAt": "2021-11-13T00:26:56.759Z",
+        "updatedAt": "2021-11-13T00:29:02.562Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2021-11-13T00:29:02.562Z",
+        "firstPublishedAt": "2021-11-13T00:29:02.562Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Anon"
+        },
+        "shortBio": {
+          "en-US": "An anonymous contributor"
+        },
+        "email": {
+          "en-US": "anon@gmail.com"
+        },
+        "avatar": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1nvDblUJBV5ELA6rMGMCK8"
+            }
+          }
+        },
+        "position": {
+          "en-US": "Contributor"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "1F4ellaEo1GichFrDu43VN",
+        "type": "Entry",
+        "createdAt": "2021-11-13T00:29:11.211Z",
+        "updatedAt": "2021-11-13T00:30:24.178Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2021-11-13T00:30:24.178Z",
+        "firstPublishedAt": "2021-11-13T00:30:24.178Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq_item"
+          }
+        }
+      },
+      "fields": {
+        "id": {
+          "en-US": 1
+        },
+        "question": {
+          "en-US": "What is the meaning to life the universe and everything?"
+        },
+        "answer": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "42.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "tag": {
+          "en-US": "intro"
+        },
+        "slug": {
+          "en-US": "the-ultimate-question"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "announcement"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "communityContribution"
+            }
+          }
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "Bf6ecfMbBmmUhU56crijl",
+        "type": "Entry",
+        "createdAt": "2021-11-14T01:14:15.080Z",
+        "updatedAt": "2021-11-14T01:28:48.558Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 18,
+        "publishedAt": "2021-11-14T01:28:48.558Z",
+        "firstPublishedAt": "2021-11-14T01:27:53.002Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 19,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "This is a post"
+        },
+        "subtitle": {
+          "en-US": "This is a subtitle"
+        },
+        "description": {
+          "en-US": "This is a short description that is used on the blog listing page. Fugiat ipsum excepteur excepteur enim ut magna exercitation."
+        },
+        "featureImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2OwZK1Zd8UHMLHj3xbcggh"
+            }
+          }
+        },
+        "fullHeader": {
+          "en-US": false
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1qCBzcA0tId5PJuHwAqUlh"
+            }
+          }
+        },
+        "date": {
+          "en-US": "2021-11-14T00:00+11:00"
+        },
+        "body": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "This is a blog post.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Amet velit veniam et occaecat excepteur dolor tempor pariatur excepteur voluptate nulla. Fugiat do aliqua dolor aliquip fugiat irure aliquip officia tempor. Ipsum minim commodo eiusmod voluptate ea aliquip sunt deserunt quis ad duis occaecat. Occaecat adipisicing reprehenderit ea culpa minim labore aute. Reprehenderit ea culpa id elit sunt fugiat.\nExercitation ad dolor sint elit qui eu amet eiusmod sint irure eu. Dolore id tempor minim Lorem esse consequat et. Reprehenderit culpa nisi laboris ad occaecat incididunt commodo officia qui. Sunt labore do est cillum sunt. Velit minim ea excepteur laborum. Voluptate consequat dolore nulla sint dolor irure fugiat eu deserunt aute reprehenderit ipsum culpa quis.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\nAmet veniam occaecat qui eiusmod elit aute ad ad anim. Eu culpa Lorem consectetur adipisicing amet ipsum reprehenderit excepteur. Ad occaecat consequat elit ullamco quis dolor. Ut ad anim aliquip aliquip ipsum nisi cillum fugiat eu. Esse dolore elit sunt consectetur pariatur excepteur irure esse quis officia est. Quis proident amet ea pariatur sunt non culpa minim velit pariatur deserunt ad aliquip non. Voluptate consequat aliqua anim qui aliqua commodo nostrud ad aliqua laboris ipsum dolor exercitation.\nNulla qui cupidatat commodo est consequat cillum amet irure eu dolor do incididunt cillum cupidatat. Lorem eiusmod veniam Lorem ut non velit eu aliquip do nisi excepteur pariatur nulla. Irure proident eu et aute laborum ullamco adipisicing duis irure anim deserunt ea. Minim fugiat aliquip Lorem mollit sint dolor dolore tempor minim ad cillum laborum adipisicing qui.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\nVoluptate reprehenderit et sint amet adipisicing non ea dolore consequat anim. Enim aute laboris laboris sunt enim et. Nostrud ullamco amet pariatur labore deserunt reprehenderit dolore excepteur Lorem irure amet. Mollit ex magna do eu elit et sunt eiusmod pariatur velit ut officia fugiat aliqua. Exercitation anim incididunt nisi anim proident. Nisi nisi nulla labore qui cupidatat magna ipsum ipsum dolor reprehenderit adipisicing sint. Sit aliquip enim dolore sunt commodo ea ex duis cillum amet qui officia.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "slug": {
+          "en-US": "this-is-a-post"
+        },
+        "preview": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "7MoCrK8DHAizlHwDAXKUzu",
+        "type": "Entry",
+        "createdAt": "2021-11-14T01:29:40.853Z",
+        "updatedAt": "2021-11-14T01:30:13.611Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2021-11-14T01:30:13.611Z",
+        "firstPublishedAt": "2021-11-14T01:30:13.611Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Terms of Service"
+        },
+        "slug": {
+          "en-US": "terms-of-service"
+        },
+        "headline": {
+          "en-US": "Session Legal"
+        },
+        "body": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "heading-1",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session Terms of Service",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Last Updated: 28/05/2021",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "These Terms of Service (“Terms”) govern your access to and use of our services that are fully owned and operated by the Oxen Privacy Tech Foundation (referred \nto as “we”, “our”, “OPTF”) including the Session website and the Session Private Messenger applications, including Linux, Windows, Mac OS, Android and Mac iOS (collectively, referred to as the “Services”) and any information, text, links, graphics, videos, audio or other material uploaded, downloaded or appearing on the Services (collectively, referred to as “Content”).",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "These Terms and the Session Privacy Policy form the End User Agreement between you and the OPTF.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Services are fully owned and delivered by the Oxen Privacy Tech \nFoundation (OPTF), a not-for-profit charity registered in Australia.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "1. Who can use the Services",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Anyone who is not barred from using the Services under the laws of the \napplicable jurisdiction, and is at least 13 years of age can use the \nService. If you are living in the United Kingdom or a European Union \ncountry, you must be at least 16 years old.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "By using these Services, you agree to form a binding End User Agreement between you and the OPTF.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "If you are accepting these Terms and using the Services on behalf of a \ncompany, organization, government, or other legal entity, you represent \nand warrant that you are authorized to do so and have the authority to \nbind such entity to these Terms, in which case the words “you” and \n“your” as used in these Terms shall refer to such entity.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "2. Our Privacy Policy",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Privacy is central to our purpose and mission. For more details, please refer to the Session ",
+                    "marks": [],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Privacy Policy",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://getsession.org/privacy-policy"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "3. Our Services",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Our Services are intended to inform you and educate you about using our private and secure communications app (Session Website), and facilitate private and secure communications between two or more parties, or within a closed group or within an open group (Session, or Session App).",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-3",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "3.1. Using the Session Website",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The purpose of the Session Website is primarily to provide you with \ninformation about the Session App and link to download of the Session \nApp. We have done our best to make sure this information is accurate and up-to-date, however, there may be unintentional errors that may mislead you. Therefore, we encourage you to contact us for any clarifications you may need.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Session Website also enables you to submit your contact details, so we are able to keep you informed about our work.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-3",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "3.2. Using the Session App",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The purpose of the Session App is to facilitate private and secure \ncommunications, without capturing or sharing any meta-data. It was \nintentionally created for use by individuals who require anonymity and \nsecurity.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "What do we mean by ‘private’?",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " The Session App does not require you to identify yourself in any way or associate your personally identifiable information including phone numbers or email addresses with the account you create on the Session App (known as a \nSession ID). The onion-routing technology behind Session means that your communications are not only free of meta-data, but you can also be completely anonymous and untraceable. There is no way for us, or anyone else to link your Session ID with your real identity — unless you create such a link by indicating your real identity through your communications, or associating your real identity with your Session ID \nthrough some other means.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "What do we mean by ‘secure’?",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " The messages you create on your Session App are encrypted and only the destination Session ID can dy-encrypt the message. The encrypted messages are wrapped in multiple layers of onion encryption and routed \nfrom the Session App through our distributed onion network before reaching their destination. While we make every effort to ensure security, we cannot be held responsible for any interception or decryption using advanced technologies, now or in the future.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Session App is a messaging app, and does not have the ability to \ncommunicate with non-Session Apps or services. Our Services do not \nprovide access to public emergency service providers like the police, \nfire department, hospitals, or other public safety organizations.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "4. Our Responsibilities and Commitments to You",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "We are committed to ensuring the delivery of our Services in a way that is accessible and reliable.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "We will not sell or otherwise monetise your personal data or content in \nany way. We cannot access your data even if we wanted to, as Session \npreserves the privacy and secrecy of your messages. See our Privacy \nPolicy for more information.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session’s License to You — Session grants you a limited, revocable, non-exclusive, and \nnon-transferable license to use our Services in accordance with these Terms.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Availability of Our Services — We strive to ensure that our Services are continuously available for use. However, there may be occasions when they are interrupted, including for maintenance, upgrades, or to resolve network or equipment failures. We may \ndiscontinue some or all of our Services, including certain features and the support for certain devices and platforms.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Keeping you informed — We continuously provide updates about our Services through \nvarious channels, including the Session Blog, Session Twitter Account and a number of community groups on Session and on Telegram. Where possible, we will strive to keep you updated about outages and service disruptions through these channels.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "5. Your Responsibilities and Rights",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-3",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "5.1. Account Management and General Use",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Software and account — You are responsible for keeping your device, Session App \nand your account up-to-date, safe and secure, including being responsible for any passwords or recovery phrases.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Fees and Taxes — You are responsible for data and mobile carrier fees and taxes \nassociated with the devices on which you use our Services.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Terms and Policies — You must use our Services according to our Terms and \npolicies. If we block your device for a breach of our Terms, you will not create another account without our permission.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Legal and Acceptable Use — You agree to use our Services only for legal, authorized, and acceptable purposes. You will not use (or assist others in using) our Services in ways that: (a) violate or infringe the rights of Session, our users, or others, including privacy, publicity, intellectual property, or other rights; (b) involve sending illegal or impermissible communications such as bulk messaging, auto-messaging, and auto-dialing; (c) breach the Session Content Policy described further below.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Harm to Session — You must not (or assist others to) access, use, modify, distribute, transfer, or exploit our Services in unauthorised manners, or in ways that harm Session, our Services, or systems. For example you must not (a) gain or try to gain unauthorised \naccess to our Services or systems; (b) disrupt the integrity or performance of our Services; (c) create accounts for our Services through unauthorized or automated means; (d) collect information about other Session users in any unauthorised manner; or (e) sell, rent, or charge for our Services.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Third-party services — Our Services may allow you to access, use, or interact with third-party websites, apps, content, and other products and services run by third parties. When you use third-party services, their terms and privacy policies govern your use of those services. When using Open Groups operated by third-parties, these Terms as well as any terms or policies associated with the Open Group will govern your use.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Open Group by Session — You may use Open Groups run by Session in accordance with \nthese Terms of Service, however, you also agree to follow the rules of the specific Open Group.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Your Content — You own and/or take responsibility for the content (text messages, audio, video, images) you submit through our Services. We can not access this information unless you explicitly send it to us, or it is published in an Open Group.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session’s Rights — You acknowledge that the OPTF owns all copyrights, trademarks, domains, logos, trade dress, trade secrets, patents, and other intellectual property rights associated with our Services. You may not use our copyrights, trademarks, domains, logos, trade dress, patents, and other intellectual property rights unless you have our written permission. To report copyright, trademark, or other intellectual property infringement, please contact support@78.47.201.78.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-3",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "5.2. Session Content Policy",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "OPTF exists to build private and secure technology, and defend your right to privacy and security in the digital world. We are also mission-driven to uphold key democratic, media freedom and human rights principles.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "To enable us to uphold our mission principles, we have identified the following activities of Session as a clear breach of these Terms.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Violent Behaviour, Violent Extremism and Terrorism",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session cannot be used to:",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "unordered-list",
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "to glorify violence, or promote violence of any form (physical, psychological, sexual) against another individual or group, or incite harm or directly attack or threaten other people on the basis of race, ethnicity, national origin, caste, sexual orientation, gender, gender identity, religious affiliation, age, disability, or serious disease.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "by organisations, groups and individuals designated by the United Nations as terrorist organisations or terrorists.\n",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Child Sexual Exploitation",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session cannot be used to organise or promote child sexual exploitation. A child is defined as anyone under the age of 18. Specifically, Session cannot be used to store or share:",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "unordered-list",
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "visual depictions of a child engaging in sexually explicit or sexually suggestive acts;",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "illustrated, computer-generated or other forms of realistic depictions of a human child in a sexually explicit context, or engaging in sexually explicit acts;",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "sexualized commentaries about or directed at a known or unknown minor;",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "links to third-party sites that host child sexual exploitation material;",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "fantasies about or promoting engagement in child sexual exploitation;",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "recruiting, advertising or expressing an interest in a commercial sex act involving a child, or in harboring and/or transporting a child for sexual purposes.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Extremely Violence and/or Graphic Content",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session cannot be used to store or share violent or gory content that is \nintended to shock or disgust others, or create harm or distress to the \nperson or persons represented in the content.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "6.0 Monitoring Session Breaches",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Our Services have been created using a privacy-by-design approach which means that it is impossible for us to analyse or monitor your content you create and store on the Session App, or share it with other users.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Open Groups on Session, by their nature, are open to the public, and the content posted shared through Open Groups can be monitored. OPTF does not have the capacity to monitor all Open Groups, however, we do make a concerted effort to monitor and where necessary moderate Open Groups that have been created by us.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-3",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "6.1 Third-party notification of breaches",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "We may be notified by third-parties of breaches to these Terms. In such cases, the evidence presented by the third-parties will be accessed by our Board and Members, to determine the severity of the breach and the required outcomes. We may engage external experts to further assist and inform us. The decisions made by our Board and Members will be final.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "All notifications, including requests for information or take down notices, will be documented in our Transparency Report that is updated every three months.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "7.0 Disclaimers and Limitations",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Disclaimers — YOU USE OUR SERVICES AT YOUR OWN RISK AND SUBJECT TO THE FOLLOWING DISCLAIMERS. WE PROVIDE OUR SERVICES ON AN “AS IS” BASIS WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND FREEDOM FROM COMPUTER VIRUS OR OTHER HARMFUL CODE. Session DOES NOT WARRANT THAT ANY INFORMATION PROVIDED BY US IS ACCURATE, COMPLETE, OR USEFUL, THAT OUR SERVICES WILL BE OPERATIONAL, \nERROR-FREE, SECURE, OR SAFE, OR THAT OUR SERVICES WILL FUNCTION WITHOUT \nDISRUPTIONS, DELAYS, OR IMPERFECTIONS. WE DO NOT CONTROL, AND ARE NOT \nRESPONSIBLE FOR, CONTROLLING HOW OR WHEN OUR USERS USE OUR SERVICES. WE ARE NOT RESPONSIBLE FOR THE ACTIONS OR INFORMATION (INCLUDING CONTENT) OF OUR USERS OR OTHER THIRD PARTIES. YOU RELEASE US, AFFILIATES, \nDIRECTORS, OFFICERS, EMPLOYEES, PARTNERS, AND AGENTS (TOGETHER, “SESSION PARTIES”) FROM ANY CLAIM, COMPLAINT, CAUSE OF ACTION, CONTROVERSY, OR DISPUTE (TOGETHER, “CLAIM”) AND DAMAGES, KNOWN AND UNKNOWN, RELATING TO, ARISING OUT OF, OR IN ANY WAY CONNECTED WITH ANY SUCH CLAIM YOU HAVE AGAINST ANY THIRD PARTIES.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Limitation of Liability — THE SESSION PARTIES WILL NOT BE LIABLE TO YOU FOR ANY LOST PROFITS OR CONSEQUENTIAL, SPECIAL, PUNITIVE, INDIRECT, OR INCIDENTAL DAMAGES RELATING TO, ARISING OUT OF, OR IN ANY WAY IN CONNECTION WITH OUR TERMS, US, OR OUR SERVICES, EVEN IF THE SESSION PARTIES HAVE BEEN ADVISED OF \nTHE POSSIBILITY OF SUCH DAMAGES. OUR AGGREGATE LIABILITY RELATING TO, ARISING OUT OF, OR IN ANY WAY IN CONNECTION WITH OUR TERMS, US, OR OUR SERVICES WILL NOT EXCEED TEN DOLLARS ($10). THE FOREGOING DISCLAIMER OF \nCERTAIN DAMAGES AND LIMITATION OF LIABILITY WILL APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW. THE LAWS OF SOME STATES OR JURISDICTIONS MAY NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO SOME OR ALL OF THE EXCLUSIONS AND LIMITATIONS SET FORTH ABOVE MAY NOT APPLY TO YOU. NOTWITHSTANDING ANYTHING TO THE CONTRARY IN OUR TERMS, IN SUCH CASES, THE LIABILITY OF THE SESSION PARTIES WILL BE LIMITED TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "8.0. Resolving Disputes and Ending Terms",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Resolving disputes — You agree to resolve any Claim you have with us relating to or arising out of our Terms, us, or our Services exclusively in the state of Victoria, Australia. You also agree to submit to the personal jurisdiction of such courts for the purpose of litigating all such disputes. The laws of Australia govern our Terms, as well as any disputes, whether in court or arbitration, which might arise between Session and you, without regard to conflict of law provisions.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Ending these Terms — You may end these Terms with Session at any time by deleting Session from your device and discontinuing use of our Services. We may modify, suspend, or terminate your access to or use of our Services anytime for any reason, such as if you violate the letter or spirit of our Terms or create harm, risk, or possible legal exposure for Session. The following provisions will survive termination of your relationship with Session: “Licenses,” “Disclaimers,” “Limitation of Liability,” “Resolving dispute,” “Availability” and “Ending these Terms,” and “General”.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "9.0 These Terms",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session may update the Terms at any time. When we update our Terms, We will update the “Last Modified” date associated with the updated Terms. Your continued use of our Services confirms your acceptance of our updated Terms and supersedes any prior agreed Terms. You will comply with all applicable export control and trade sanctions laws. Our Terms cover the entire agreement between you and Session regarding our Services. If you do not agree with our Terms, you should stop using our Services.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "If we fail to enforce our Terms, we do not waive the right to enforce them. If any provision of the Terms is deemed unlawful, void, or unenforceable, that provision shall be deemed severable from our Terms and shall not affect the enforceability of the remaining provisions. Our Services are not intended for distribution to or use in any country where such distribution or use would violate local law or would subject us to any regulations in another country. If you have specific questions about these Terms, please contact us at support@78.47.201.78.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session iOS – End User License Agreement",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "By using the Session iOS app (“App”), you not only agree to the Terms of Service and Privacy Policy of Session, but also this End User License Agreement (“EULA”).",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "ordered-list",
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Acknowledgement",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": You acknowledge that this EULA is concluded between LAG Foundation Ltd (“Session”), and not with Apple, Inc (“Apple”), and Session, not Apple, is solely responsible for the Licensed Application and the content thereof.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Scope of License",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": Subject to your compliance with our Terms of Service, Session grants you a limited, non-exclusive, non-transferable, revocable license to download and use the App.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Maintenance and Support",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": Session provides no guarantee that We will supply you with maintenance or support beyond what already exists on our documentation and github pages. Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the App.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Warranty",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": Our warrant can be found in our Terms of Service, which you agree to. In the event of any failure of the Licensed Application to conform to the warranty, You may notify Apple, and Apple will refund the purchase price for the App. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App, and any other claims, losses, liabilities, damages, costs or expenses attributable to any failure to conform to any warranty will be handled in accordance with the Session Terms of Service.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Product Claims",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": Session, and not Apple, is responsible for addressing any claims relating to the App or its use, including, but not limited to: (i) product liability claims; (ii) any claim that the Licensed Application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, privacy, or similar legislation. This is handled in accordance with the Session Terms of Service.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Intellectual Property Rights",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": Session, and not Apple, is responsible for all intellectual property issues associated with the app. This is covered in our Terms of Service.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Legal Compliance",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": You represent and warrant that (i) he/she is not located in a country \nthat is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting” country; and (ii) he/she is not listed on any U.S. Government list of prohibited or restricted parties.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Developer Name and Address",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": If you have questions about the Terms of Service or this EULA, you may email support@78.47.201.78 (LAG Foundation Ltd, Level 1 452 Flinders Street Melbourne VIC 3000 Australia)",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Third Party Terms of Agreement",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": You must comply with applicable third party terms of agreement when using the App, if any such third party applications exist.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Third Party Beneficiary",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": Session and You acknowledge and agree that Apple, and Apple’s subsidiaries, are third party beneficiaries of this EULA, and that, upon Your acceptance of the Terms of Service and this EULA, Apple will have the right (and will be deemed to have accepted the right) to enforce the EULA against You as a third party beneficiary thereof.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Unacceptable Content",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": You acknowledge that you are subject to acceptable content policies within Open Groups and other areas on the app and must not use the App to distribute objectionable content. If you are deemed an abusive user you may also be restricted or removed from Groups or the App if reported or discovered.",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Conclusion",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This page outlines the Terms of Service for the Session app, services, and website, as well as the End User License Agreement for iOS. If you’d like to read more about how we handle your privacy, you can check out the Session privacy policy. If you have any questions, opinions, or concerns about Session’s Terms, please get in touch with us via email at support@78.47.201.78.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              }
+            ]
+          }
+        },
+        "preview": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "41dvEFcreJClXnxPsubmOA",
+        "type": "Entry",
+        "createdAt": "2021-11-14T01:30:46.605Z",
+        "updatedAt": "2021-11-14T01:31:08.312Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2021-11-14T01:31:08.312Z",
+        "firstPublishedAt": "2021-11-14T01:31:08.312Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Privacy Policy"
+        },
+        "slug": {
+          "en-US": "privacy-policy"
+        },
+        "headline": {
+          "en-US": "Session Legal"
+        },
+        "body": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "heading-1",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session Privacy Policy",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Session is underpinned by our privacy principles that intend to protect and defend your personal identity and information and the privacy of your communications at all times.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "1.0 Session App",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Session App is designed to never know who you are, who you are talking to, or the contents of your communications (text messages, audio, video, images).",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Session App does not collect or share your information. That’s our policy in a nutshell.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Session App or its associated software doesn’t store any identifying information about your device, such as your IP address or your user agent (browser, device type). We don’t store or collect any information which could be used to track you.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This means we don’t need your phone number, e-mail, or any information tied to your real identity to create a Session account. There are no special settings you need to set to be private. Session is preservices your privacy by default.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "2.0 Session Website",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Session Website never attempts to link your usage of the website to your real identity or create a user profile based on your activity.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The Session Website features an opt-in form that lets you subscribe to our email newsletter that is operated using the third party Campaign Monitor email newsletter platform. If you choose to subscribe, your e-mail will be stored by Campaign Monitor, under their Terms of Use and Privacy Policy. However, if you unsubscribe from our mailing list, your email will be deleted.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "To ensure that the opt-in form works effectively, a small cookie is used. The form is embedded into WordPress – the platform we use to manage the website, and it is not possible to disable this cookie. This cookie (fca_eoi_pagecount) is not used by us to track your use of the Session website or other websites, or to track your online activities in any way.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "We will never share or sell your personal details, including your email address, and will only use your email address to communicate our newsletters with you.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "We use Cloudflare services in order to serve the Session website. Cloudflare keeps logs about web requests for the Session website, which can be stored for up to 7 days.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "3.0 Other Privacy Issues",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "You should be aware that the Google Play and the App Store may collect information and share information about you when you download Session for your Android or iOS device.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "To download Session as privately as possible, it is recommended that you utilise a privacy-preserving VPN or download Session from platforms that do not keep user analytic data.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "If you use Session on your Android or iOS phone, Google or Apple might store information about how you use the app. They may record when the app is closed, opened, how long you use it for, crash logs, and your device model. This user analytics data could also be associated with your Google or Apple account, and it is shared with us through the app store dashboard. This is a limitation of mobile operating systems, and applies to all apps used on your device. We do not share any of your information with Apple and Google, and any analytics data that is shared with us is not sold or shared with anyone else. If required, please read the Apple or Google’s privacy policies. If you’re using iOS, check out Apple’s App Store Review Guidelines. For Android, read the User Data section of Google’s Developer Policy Center.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-2",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Any more questions?",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This is the way the Session app and website treat your privacy. If you would like more information, have suggestions about how we can better protect your privacy, or just want to say hello — please send us an email at ",
+                    "marks": [],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "team@oxen.io",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ],
+                    "data": {
+                      "uri": "mailto:team@oxen.io"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              }
+            ]
+          }
+        },
+        "preview": {
+          "en-US": false
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "1nvDblUJBV5ELA6rMGMCK8",
+        "type": "Asset",
+        "createdAt": "2021-11-13T00:28:13.315Z",
+        "updatedAt": "2021-11-13T00:28:39.663Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2021-11-13T00:28:39.663Z",
+        "firstPublishedAt": "2021-11-13T00:28:39.663Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Blank Avatar"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/efwlt0x77ew3/1nvDblUJBV5ELA6rMGMCK8/e7f4ba6f0a1dab2f203703a993e5a5a2/avatar.png",
+            "details": {
+              "size": 6050,
+              "image": {
+                "width": 240,
+                "height": 240
+              }
+            },
+            "fileName": "avatar.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "id": "2OwZK1Zd8UHMLHj3xbcggh",
+        "type": "Asset",
+        "createdAt": "2021-11-14T01:27:09.142Z",
+        "updatedAt": "2021-11-14T01:27:45.322Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2021-11-14T01:27:45.322Z",
+        "firstPublishedAt": "2021-11-14T01:27:45.322Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Blog Header"
+        },
+        "description": {
+          "en-US": "This is an example header / feature image for a blog post."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/efwlt0x77ew3/2OwZK1Zd8UHMLHj3xbcggh/ace7a3c17c248e7bbd78da72f7878828/header.jpg",
+            "details": {
+              "size": 37480,
+              "image": {
+                "width": 2484,
+                "height": 1200
+              }
+            },
+            "fileName": "header.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1BhurSWwRR6ZFVgV5WakOu",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "c796c133-9ce4-48c8-91ad-cf29404575e7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "createdAt": "2021-07-15T09:16:05Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedAt": "2021-07-15T09:16:05Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1BiyJ23RfyCChTiYpX7snw",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "efwlt0x77ew3"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "createdAt": "2021-07-15T09:16:05Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "47EBE5w4mmAv95UMicpR16"
+          }
+        },
+        "updatedAt": "2021-07-15T09:16:05Z"
+      }
+    }
+  ]
+}
