@@ -2,7 +2,34 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### Setup
+
+1. Install `nvm`
+
+Follow nvm setup instructions [here](https://github.com/nvm-sh/nvm/blob/master/README.md).
+
+2. Install Node.js locally
+
+```
+nvm install 16.13.0
+nvm use 16.13.0
+```
+
+3. Install `yarn`
+
+```
+npm install yarn -g
+```
+
+4. Install dependencies
+
+Using `--frozen-lockfile` makes sure that the environment is consistent on any machine by installing the exact package versions listed in the [yarn.lock](yarn.lock).
+
+```
+yarn install --frozen-lockfile
+```
+
+### Developing
 
 ```bash
 yarn dev
