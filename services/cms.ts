@@ -7,7 +7,7 @@ import {
 
 const client: ContentfulClientApi = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
-  //environment: process.env.CONTENTFUL_ENVIRONMENT_ID!,
+  environment: process.env.CONTENTFUL_ENVIRONMENT_ID!,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
   host: "cdn.contentful.com",
 });

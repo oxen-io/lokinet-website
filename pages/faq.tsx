@@ -5,36 +5,28 @@ import METADATA from "../constants/metadata";
 import { PageRoot } from "../components/layout/PageRoot";
 import React from "react";
 import { fetchFAQItems } from "../services/cms";
+import CMS from "../constants/cms";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { INLINES } from "@contentful/rich-text-types";
 import styled from "styled-components";
+import { IFAQItem } from "@/types/cms";
 
 const StyledLink = styled.a`
   text-decoration: underline;
 `;
 
-export const getStaticProps: any = async () => {
-  const { entries: _entries, total } = await fetchFAQItems();
-  const entries: any = {};
-  _entries.forEach((entry: any) => {
-    if (!entries[entry.tag]) {
-      entries[entry.tag] = [];
-    }
-    entries[entry.tag].push(entry);
-  });
+const StyledFaqWrapper = styled.div`
+  margin-bottom: 0.125rem; ;
+`;
 
-  return {
-    props: {
-      entries,
-      total,
-    },
-    revalidate: 100,
-  };
+type Props = {
+  entries: Object;
 };
 
-export default function Faq(props: any) {
+export default function Faq(props: Props) {
   const { entries: faqItems } = props;
 
+  // eslint-disable-next-line react/display-name
   const docToReactOption = {
     renderNode: {
       [INLINES.HYPERLINK]: ({ data }, children) => (
@@ -54,13 +46,16 @@ export default function Faq(props: any) {
     const content = [];
     for (let key of Object.keys(faqItems)) {
       content.push(
-        <div key={key} className="mb-10">
+        <StyledFaqWrapper key={key}>
           <h2>{key}</h2>
           <div>
             <Accordion>
-              {faqItems[key].map((faqItem: any) => {
+              {faqItems[key].map((faqItem: IFAQItem, index: number) => {
                 return (
-                  <AccordionSection key={key} title={faqItem.question}>
+                  <AccordionSection
+                    key={`${key}-${index}`}
+                    title={faqItem.question}
+                  >
                     {documentToReactComponents(
                       faqItem.answer,
                       docToReactOption
@@ -70,7 +65,7 @@ export default function Faq(props: any) {
               })}
             </Accordion>
           </div>
-        </div>
+        </StyledFaqWrapper>
       );
     }
     return content;
@@ -92,3 +87,22 @@ export default function Faq(props: any) {
     </PageRoot>
   );
 }
+
+export const getStaticProps: any = async () => {
+  const { entries: _entries, total } = await fetchFAQItems();
+  const entries: any = {};
+  _entries.forEach((entry: any) => {
+    if (!entries[entry.tag]) {
+      entries[entry.tag] = [];
+    }
+    entries[entry.tag].push(entry);
+  });
+
+  return {
+    props: {
+      entries,
+      total,
+    },
+    revalidate: CMS.CONTENT_REVALIDATE_RATE,
+  };
+};
