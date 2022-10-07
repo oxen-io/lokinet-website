@@ -6,7 +6,10 @@ import { PageRoot } from "../components/layout/PageRoot";
 import React from "react";
 import { fetchFAQItems } from "../services/cms";
 import CMS from "../constants/cms";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import {
+  Options,
+  documentToReactComponents,
+} from "@contentful/rich-text-react-renderer";
 import { INLINES } from "@contentful/rich-text-types";
 import styled from "styled-components";
 import { IFAQItem } from "@/types/cms";
@@ -24,10 +27,10 @@ type Props = {
 };
 
 export default function Faq(props: Props) {
-  const { entries: faqItems } = props;
+  const { entries: faqItems }: { entries: { [key: string]: any } } = props;
 
   // eslint-disable-next-line react/display-name
-  const docToReactOption = {
+  const docToReactOption: Options = {
     renderNode: {
       [INLINES.HYPERLINK]: ({ data }, children) => (
         <StyledLink
