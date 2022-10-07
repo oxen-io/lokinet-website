@@ -29,9 +29,9 @@ type Props = {
 export default function Faq(props: Props) {
   const { entries: faqItems }: { entries: { [key: string]: any } } = props;
 
-  // eslint-disable-next-line react/display-name
   const docToReactOption: Options = {
     renderNode: {
+      // eslint-disable-next-line react/display-name
       [INLINES.HYPERLINK]: ({ data }, children) => (
         <StyledLink
           className="underline"
