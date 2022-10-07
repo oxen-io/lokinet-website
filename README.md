@@ -29,6 +29,23 @@ Using `--frozen-lockfile` makes sure that the environment is consistent on any m
 yarn install --frozen-lockfile
 ```
 
+5. Signup for a free [Contentful](https://www.contentful.com/) account and create an organisation and within that create a space.
+
+   We called our organization **Session** and the space **Website**.
+
+   - For the site to build correctly you need to import our Content models and assets into your Contentful space. We have created some example content so you can get comfortable with our Contentful setup.
+
+   - Add your `space ID` and `content management token` inside of [contentful/config.json](contentful/config.json)
+   - Run this command inside the root of this project
+
+   ```
+     npx contentful space import --config contentful/config.json
+   ```
+
+   - For more information about importing/exporting in Contentful see [here](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/).
+
+6. Setup your environment file. See our [.env.example](.env.example) as a guide. Make sure to call the file `.env.local`.
+
 ### Developing
 
 ```bash

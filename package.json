@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.12.1",
     "@react-three/fiber": "^7.0.1",
+    "contentful": "^9.2.5",
+    "direction": "^2.0.1",
     "next": "^10.2.3",
     "next-compose-plugins": "^2.2.1",
     "react": "17.0.2",
