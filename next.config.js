@@ -77,6 +77,10 @@ const config = {
         source: "/windows",
         destination: "/api/download/windows",
       },
+      {
+        source: "/mac",
+        destination: "/api/download/mac",
+      },
     ];
   },
   reactStrictMode: true,
