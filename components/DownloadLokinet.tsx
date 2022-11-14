@@ -30,10 +30,10 @@ const DownloadIconButton = styled.button`
   height: auto;
   background: none;
   border: none;
-  transition: all 0.3s;
+  transition: all 0.15s;
 
   &:hover {
-    transform: scale(1.2);
+    opacity: 0.4;
   }
 `;
 
