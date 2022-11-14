@@ -38,13 +38,11 @@ async function fetchLatestVersionLink(repo: string, platform: string) {
     (el: { browser_download_url: string; name: string }) => {
       if (platform === "/mac") {
         link = el.browser_download_url;
-        let regex = new RegExp(/.*.dmg$|.*.pkg$/);
-        el.name.match(regex) ? true : false;
+        return el.name.endsWith(".dmg");
       } else {
         //for windows
         link = el.browser_download_url;
-        let regex = new RegExp(/.*.exe$/);
-        el.name.match(regex) ? true : false;
+        return el.name.endsWith(".exe");
       }
     }
   );
