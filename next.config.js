@@ -74,12 +74,12 @@ const config = {
         destination: "/api/download/linux",
       },
       {
-        source: "/windows",
-        destination: "/api/download/windows",
-      },
-      {
         source: "/mac",
         destination: "/api/download/mac",
+      },
+      {
+        source: "/windows",
+        destination: "/api/download/windows",
       },
     ];
   },

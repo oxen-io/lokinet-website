@@ -33,25 +33,22 @@ async function fetchLatestVersionLink(repo: string, platform: string) {
     return fallbackVersionLink;
   }
 
-  let link;
+  let link = null;
   let hasPlatformLink = data.assets.some(
-    (el: { browser_download_url: string; content_type: string }) => {
+    (el: { browser_download_url: string; name: string }) => {
       if (platform === "/mac") {
         link = el.browser_download_url;
-        return (
-          el.content_type === "application/x-xar" ||
-          el.content_type === "application/octet-stream"
-        );
+        let regex = new RegExp(/.*.dmg$|.*.pkg$/);
+        el.name.match(regex) ? true : false;
       } else {
         //for windows
         link = el.browser_download_url;
-        return (
-          el.content_type === "application/x-ms-dos-executable" ||
-          el.content_type === "application/x-msdownload"
-        );
+        let regex = new RegExp(/.*.exe$/);
+        el.name.match(regex) ? true : false;
       }
     }
   );
+
   if (hasPlatformLink) return link;
   return fallbackVersionLink;
 }
