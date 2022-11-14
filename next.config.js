@@ -76,8 +76,8 @@ const config = {
   async rewrites() {
     return [
       {
-        source: "/linux",
-        destination: "/api/download/linux",
+        source: "/mac",
+        destination: "/api/download/mac",
       },
       {
         source: "/windows",
