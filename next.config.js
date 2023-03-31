@@ -9,7 +9,7 @@ const ContentSecurityPolicy = `
       : ""
   };
   child-src 'self';
-  frame-src 'self' https://getsession.org https://optf.ngo https://oxen.io https://staging.getsession.org https://staging.oxen.io;
+  frame-src 'self' https://getsession.org https://optf.ngo https://oxen.io https://staging.getsession.org https://staging.oxen.io *.youtube.com player.vimeo.com *.twitter.com;
   frame-ancestors 'self' https://getsession.org https://optf.ngo https://oxen.io https://staging.getsession.org https://staging.oxen.io;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data:;
