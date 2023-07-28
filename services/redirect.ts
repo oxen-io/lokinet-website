@@ -9,18 +9,14 @@ export interface IRedirection {
 
 const redirects: IRedirection[] = getConfig().serverRuntimeConfig.redirects;
 
-async function fetchLatestVersionLink(repo: string, platform: string) {
-  const fallbackVersionLink = `https://github.com/oxen-io/lokinet/releases/download/${
-    platform === "/windows"
-      ? "v0.9.7/lokinet-0.9.7-win64.exe"
-      : "v0.8.4/lokinet-v0.8.4-macos.pkg"
-  }`; // NOTE should update periodically
+const fallbackVersion = "0.9.11"; // NOTE should update periodically
 
+async function fetchLatestVersion(repo: string) {
   const res = await fetch(
     `https://api.github.com/repos/oxen-io/${repo}/releases/latest`
   );
   const data = await res.json();
-  if (!data) return fallbackVersionLink;
+  if (!data) return fallbackVersion;
 
   if (res.status !== 200) {
     console.warn(
@@ -28,32 +24,41 @@ async function fetchLatestVersionLink(repo: string, platform: string) {
       `${data.documentation && `| See ${data.documentation}`}`
     );
     console.log(
-      `Redirect Service: Falling back to version link ${fallbackVersionLink}.`
+      `Redirect Service: Falling back to version ${fallbackVersion}.`
     );
-    return fallbackVersionLink;
+    return fallbackVersion;
   }
 
-  let link = null;
-  let hasPlatformLink = data.assets.some(
-    (el: { browser_download_url: string; name: string }) => {
-      if (platform === "/mac") {
-        link = el.browser_download_url;
-        return el.name.endsWith(".dmg");
-      } else {
-        //for windows
-        link = el.browser_download_url;
-        return el.name.endsWith(".exe");
-      }
-    }
-  );
+  return data["tag_name"].split("v")[1];
+}
 
-  if (hasPlatformLink) return link;
-  return fallbackVersionLink;
+async function fetchDynamicRedirects() {
+  const desktopVersion = await fetchLatestVersion("lokinet");
+  const redirects: IRedirection[] = [
+    {
+      source: "/mac",
+      destination: `https://github.com/oxen-io/lokinet/releases/download/v${desktopVersion}/lokinet-macOS.${desktopVersion}.dmg`,
+      permanent: true,
+    },
+    {
+      source: "/windows",
+      destination: `https://github.com/oxen-io/lokinet/releases/download/v${desktopVersion}/lokinet-${desktopVersion}-win64.exe`,
+      permanent: true,
+    },
+  ];
+  return redirects;
 }
 
 export async function getDynamicRedirection(url: string) {
-  const dynamicRedirects = await fetchLatestVersionLink("lokinet", url);
-  return dynamicRedirects;
+  const dynamicRedirects = await fetchDynamicRedirects();
+  let redirection = "";
+  dynamicRedirects.forEach((dynamicRedirection) => {
+    if (url === dynamicRedirection.source) {
+      redirection = dynamicRedirection.destination;
+      return;
+    }
+  });
+  return redirection;
 }
 
 export async function hasRedirection(url: string) {
