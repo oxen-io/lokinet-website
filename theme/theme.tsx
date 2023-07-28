@@ -7,13 +7,15 @@ export const LokinetThemeProvider = ({ children }: any) => {
   const [colorMode, rawSetColorMode] = React.useState<string | undefined>(
     undefined
   );
+
   React.useEffect(() => {
     const root = window.document.documentElement;
-    const initialColorValue = root.style.getPropertyValue(
-      "--initial-color-mode"
-    );
+    const initialColorValue =
+      localStorage.getItem("color-mode") ||
+      root.style.getPropertyValue("--initial-color-mode");
     rawSetColorMode(initialColorValue);
   }, []);
+
   const setColorMode = (newValue: string) => {
     const root = window.document.documentElement;
     // 1. Update React color-mode state

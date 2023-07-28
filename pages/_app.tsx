@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     --initial-color-mode: 'light';
   }
 `;
+
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
