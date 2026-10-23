@@ -32,24 +32,24 @@ const StyledFaqLink = styled(StyledInternalLinkButton)`
 
 export const TermsOfServiceLinkButton = () => {
   return (
-    <Link href="/terms-of-service" passHref={true}>
-      <StyledPrivacyLink>Terms of Service</StyledPrivacyLink>
-    </Link>
+    <StyledPrivacyLink as={Link} href="/terms-of-service">
+      Terms of Service
+    </StyledPrivacyLink>
   );
 };
 
 export const PrivacyLinkButton = () => {
   return (
-    <Link href="/privacy-policy" passHref={true}>
-      <StyledPrivacyLink>Privacy Policy</StyledPrivacyLink>
-    </Link>
+    <StyledPrivacyLink as={Link} href="/privacy-policy">
+      Privacy Policy
+    </StyledPrivacyLink>
   );
 };
 
 export const FaqLinkButton = () => {
   return (
-    <Link href="/faq" passHref={true}>
-      <StyledFaqLink>FAQ</StyledFaqLink>
-    </Link>
+    <StyledFaqLink as={Link} href="/faq">
+      FAQ
+    </StyledFaqLink>
   );
 };

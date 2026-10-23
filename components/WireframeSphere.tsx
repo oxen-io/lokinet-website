@@ -1,7 +1,7 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
 import {
   FallbackWireframeSphere,
-  IsWebGLAvailable,
+  useIsWebGLAvailable,
 } from "./WireframeFallbacks";
 import { useContext, useRef } from "react";
 
@@ -26,9 +26,7 @@ const WireframeContainer = styled.div`
   max-width: 100%;
 `;
 
-function AnimatedSphere(
-  props: JSX.IntrinsicElements["mesh"] & { color: string }
-) {
+function AnimatedSphere(props: ThreeElements["mesh"] & { color: string }) {
   const mesh = useRef<any>(null!);
   useFrame((_state, _delta) => {
     mesh.current.rotation.x += 0.001;
@@ -48,7 +46,7 @@ function AnimatedSphere(
 }
 
 export const WireframeSphere = () => {
-  const hasWebGL = IsWebGLAvailable();
+  const hasWebGL = useIsWebGLAvailable();
   const { colorMode } = useContext(ThemeContext);
   let color = colorMode === "dark" ? "white" : "black";
 

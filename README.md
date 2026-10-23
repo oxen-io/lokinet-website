@@ -11,8 +11,8 @@ Follow nvm setup instructions [here](https://github.com/nvm-sh/nvm/blob/master/R
 2. Install Node.js locally
 
 ```
-nvm install 16.13.0
-nvm use 16.13.0
+nvm install 22.23.4
+nvm use 22.23.4
 ```
 
 3. Install `yarn`

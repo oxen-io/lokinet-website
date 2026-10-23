@@ -120,7 +120,7 @@ const StyledAccordion = styled.ul`
   list-style-type: none;
 `;
 
-export const Accordion = (props: { children: React.ReactNodeArray }) => {
+export const Accordion = (props: { children: React.ReactNode[] }) => {
   const [expandedIndex, setExpandedIndex] = useState<number>(-1);
 
   let index = -1;
@@ -133,7 +133,7 @@ export const Accordion = (props: { children: React.ReactNodeArray }) => {
     React.ReactNode
   >(props.children, (child) => {
     index = index + 1;
-    if (React.isValidElement(child)) {
+    if (React.isValidElement<Record<string, unknown>>(child)) {
       return React.cloneElement(child, {
         expandedIndex,
         index,

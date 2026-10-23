@@ -40,23 +40,22 @@ const DownloadIconButton = styled.button`
 function MacDownloadButton() {
   return (
     <DownloadIconButton>
-      <Link href="/mac">
-        <a
-          rel="noopener noreferrer"
-          onClick={() =>
-            window.open(
-              "https://docs.oxen.io/products-built-on-oxen/lokinet/guides/macos-gui-install-guide"
-            )
-          }
+      <Link
+        href="/mac"
+        rel="noopener noreferrer"
+        onClick={() =>
+          window.open(
+            "https://docs.oxen.io/products-built-on-oxen/lokinet/guides/macos-gui-install-guide"
+          )
+        }
+      >
+        <svg
+          fill="var(--color-text)"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
         >
-          <svg
-            fill="var(--color-text)"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path d="M22 17.607c-.786 2.28-3.139 6.317-5.563 6.361-1.608.031-2.125-.953-3.963-.953-1.837 0-2.412.923-3.932.983C5.97 24.097 2 18.171 2 13.003c0-4.747 3.308-7.1 6.198-7.143 1.55-.028 3.014 1.045 3.959 1.045.949 0 2.727-1.29 4.596-1.101.782.033 2.979.315 4.389 2.377-3.741 2.442-3.158 7.549.858 9.426zM16.778 0c-2.826.114-5.132 3.079-4.81 5.531 2.612.203 5.118-2.725 4.81-5.531z" />
-          </svg>
-        </a>
+          <path d="M22 17.607c-.786 2.28-3.139 6.317-5.563 6.361-1.608.031-2.125-.953-3.963-.953-1.837 0-2.412.923-3.932.983C5.97 24.097 2 18.171 2 13.003c0-4.747 3.308-7.1 6.198-7.143 1.55-.028 3.014 1.045 3.959 1.045.949 0 2.727-1.29 4.596-1.101.782.033 2.979.315 4.389 2.377-3.741 2.442-3.158 7.549.858 9.426zM16.778 0c-2.826.114-5.132 3.079-4.81 5.531 2.612.203 5.118-2.725 4.81-5.531z" />
+        </svg>
       </Link>
     </DownloadIconButton>
   );
@@ -65,23 +64,22 @@ function MacDownloadButton() {
 function WindowsDownloadButton() {
   return (
     <DownloadIconButton>
-      <Link href="/windows">
-        <a
-          rel="noopener noreferrer"
-          onClick={() =>
-            window.open(
-              "https://docs.oxen.io/oxen-docs/products-built-on-oxen/lokinet/guides/windows-gui-install-guide"
-            )
-          }
+      <Link
+        href="/windows"
+        rel="noopener noreferrer"
+        onClick={() =>
+          window.open(
+            "https://docs.oxen.io/oxen-docs/products-built-on-oxen/lokinet/guides/windows-gui-install-guide"
+          )
+        }
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-2.61977004 -2.61977004 92.56520808 92.83416708"
+          fill="var(--color-text)"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="-2.61977004 -2.61977004 92.56520808 92.83416708"
-            fill="var(--color-text)"
-          >
-            <path d="M0 12.40183L35.68737 7.5416l.0156 34.42275-35.66976.20313zm35.67037 33.52906l.0277 34.45332-35.66989-4.9041-.002-29.77972zm4.32607-39.02494L87.31462 0v41.527l-47.31818.37565zm47.32923 39.34876l-.0111 41.33992-47.31817-6.67838-.0663-34.73858z" />
-          </svg>
-        </a>
+          <path d="M0 12.40183L35.68737 7.5416l.0156 34.42275-35.66976.20313zm35.67037 33.52906l.0277 34.45332-35.66989-4.9041-.002-29.77972zm4.32607-39.02494L87.31462 0v41.527l-47.31818.37565zm47.32923 39.34876l-.0111 41.33992-47.31817-6.67838-.0663-34.73858z" />
+        </svg>
       </Link>
     </DownloadIconButton>
   );

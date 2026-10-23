@@ -1,9 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
-import { createGlobalStyle } from "styled-components";
+import {
+  ShouldForwardProp,
+  StyleSheetManager,
+  createGlobalStyle,
+} from "styled-components";
 import { LokinetThemeProvider } from "../theme/theme";
 import React from "react";
+import isPropValid from "@emotion/is-prop-valid";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,14 +35,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+// styled-components v6 no longer keeps custom styled props (maxWidth, isVisible...) off DOM elements.
+const shouldForwardProp: ShouldForwardProp<"web"> = (propName, target) =>
+  typeof target === "string" ? isPropValid(propName) : true;
+
 function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <StyleSheetManager shouldForwardProp={shouldForwardProp}>
       <GlobalStyle />
       <LokinetThemeProvider>
         <Component {...pageProps} />
       </LokinetThemeProvider>
-    </>
+    </StyleSheetManager>
   );
 }
 export default App;

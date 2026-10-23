@@ -18,10 +18,8 @@ function SvgComponent(props: { fill: string }) {
 export default function Logo() {
   return (
     <StyledContainer>
-      <Link href="/" passHref={true}>
-        <a>
-          <SvgComponent fill="var(--color-text)" />
-        </a>
+      <Link href="/">
+        <SvgComponent fill="var(--color-text)" />
       </Link>
     </StyledContainer>
   );
