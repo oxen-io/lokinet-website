@@ -60,9 +60,9 @@ export default function TermsOfService() {
         <p>
           Privacy is central to our purpose and mission. For more details,
           please refer to the{" "}
-          <Link href="/privacy-policy" passHref={true}>
-            <StyledLink>Lokinet Privacy Policy</StyledLink>
-          </Link>
+          <StyledLink as={Link} href="/privacy-policy">
+            Lokinet Privacy Policy
+          </StyledLink>
           .
         </p>
         <h2>3. Our Services</h2>

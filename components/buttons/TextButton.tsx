@@ -31,9 +31,9 @@ const StyledTextButton = styled.div`
 
 export const TextFaqButton = () => {
   return (
-    <Link href="/faq" passHref={true}>
-      <StyledTextButton>FREQUENTLY ASKED QUESTIONS</StyledTextButton>
-    </Link>
+    <StyledTextButton as={Link} href="/faq">
+      FREQUENTLY ASKED QUESTIONS
+    </StyledTextButton>
   );
 };
 

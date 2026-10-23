@@ -1,9 +1,9 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
 import {
   FallbackWireframeHole,
-  IsWebGLAvailable,
+  useIsWebGLAvailable,
 } from "./WireframeFallbacks";
-import { Shader, Vector3 } from "three";
+import { Vector3, WebGLProgramParametersWithUniforms } from "three";
 import { useCallback, useContext, useMemo } from "react";
 
 import { Flex } from "./flex/Flex";
@@ -65,9 +65,7 @@ const SvgPlusTinyIcon = () => (
   </Svg>
 );
 
-function AnimatedHole(
-  props: JSX.IntrinsicElements["mesh"] & { color: string }
-) {
+function AnimatedHole(props: ThreeElements["mesh"] & { color: string }) {
   const uniforms = useMemo(
     () => ({
       time: { value: 0.0 },
@@ -83,7 +81,7 @@ function AnimatedHole(
   });
 
   const oBC = useCallback(
-    (s: Shader) => {
+    (s: WebGLProgramParametersWithUniforms) => {
       const c = "#include <common>";
 
       const vertexCode = `
@@ -113,13 +111,13 @@ function AnimatedHole(
   );
 
   return (
-    <instancedMesh count={1}>
-      <cylinderBufferGeometry attach="geometry" args={[1, 1, 1, 30, 30, true]}>
+    <instancedMesh args={[undefined, undefined, 1]}>
+      <cylinderGeometry attach="geometry" args={[1, 1, 1, 30, 30, true]}>
         <instancedBufferAttribute
           args={[colorArray, 1]}
-          attachObject={["attributes", "color"]}
+          attach="attributes-color"
         />
-      </cylinderBufferGeometry>
+      </cylinderGeometry>
       <meshBasicMaterial
         color={props.color}
         wireframe={true}
@@ -131,7 +129,7 @@ function AnimatedHole(
 }
 
 export const WireframeHole = () => {
-  const hasWebGL = IsWebGLAvailable();
+  const hasWebGL = useIsWebGLAvailable();
   const { colorMode } = useContext(ThemeContext);
   let color = colorMode === "dark" ? "white" : "black";
 
