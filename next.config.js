@@ -1,6 +1,3 @@
-const withPlugins = require("next-compose-plugins");
-const withTM = require("next-transpile-modules")(["three"]);
-
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' ${
@@ -88,4 +85,4 @@ const config = {
   reactStrictMode: true,
 };
 
-module.exports = withPlugins([withTM], config);
+module.exports = config;
