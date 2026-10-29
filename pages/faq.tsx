@@ -5,7 +5,6 @@ import METADATA from "../constants/metadata";
 import { PageRoot } from "../components/layout/PageRoot";
 import React from "react";
 import { fetchFAQItems } from "../services/cms";
-import CMS from "../constants/cms";
 import {
   Options,
   documentToReactComponents,
@@ -106,6 +105,5 @@ export const getStaticProps: any = async () => {
       entries,
       total,
     },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };
 };
